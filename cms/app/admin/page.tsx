@@ -7,14 +7,6 @@ export default function AdminPage() {
   const [search, setSearch] = useState('');
   const router = useRouter();
 
-  // 🔥 CEK LOGIN
-  useEffect(() => {
-    const isLogin = localStorage.getItem('admin');
-    if (!isLogin) {
-      router.push('/login');
-    }
-  }, []);
-
   // DELETE
   const deleteReport = async (id: number) => {
     try {
@@ -71,7 +63,7 @@ export default function AdminPage() {
   // 🔥 LOGOUT FUNCTION
   const handleLogout = () => {
     localStorage.removeItem('admin');
-    router.push('/login');
+    window.location.href = 'http://localhost:3001/';
   };
 
   return (
