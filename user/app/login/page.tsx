@@ -1,28 +1,40 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('anna');
+  const [password, setPassword] = useState('anna123');
   const router = useRouter();
+
+  // 🔥 kalau sudah login, langsung ke admin
+  useEffect(() => {
+    const isLogin = localStorage.getItem('admin');
+    if (isLogin) {
+      window.location.href = 'http://localhost:3002/admin';
+    }
+  }, []);
 
   const handleLogin = async (e: any) => {
     e.preventDefault();
 
-    const res = await fetch('http://127.0.0.1:3000/auth/login', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, password }),
-    });
+    try {
+      const res = await fetch('http://127.0.0.1:3000/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
 
-    const data = await res.json();
+      const data = await res.json();
 
-    if (data.success) {
-      localStorage.setItem('admin', 'true');
-      router.push('/admin');
-    } else {
-      alert('Email / password salah');
+      if (data.success) {
+        localStorage.setItem('admin', 'true');
+        window.location.href = 'http://localhost:3002/admin';
+      } else {
+        alert('Email / password salah');
+      }
+    } catch {
+      alert('Server error');
     }
   };
 
