@@ -23,21 +23,29 @@ export default function AdminPage() {
   };
 
   // UPDATE STATUS
-  const updateStatus = async (id: number) => {
-    try {
-      const res = await fetch(`http://127.0.0.1:3000/reports/${id}`, {
-        method: 'PATCH',
-      });
+  const updateStatus = async (id: number, currentStatus: string) => {
+  let nextStatus = 'pending';
 
-      const updated = await res.json();
+  if (currentStatus === 'pending') nextStatus = 'proses';
+  else if (currentStatus === 'proses') nextStatus = 'selesai';
+  else nextStatus = 'pending';
 
-      setReports((prev) =>
-        prev.map((r) => (r.id === id ? updated : r))
-      );
-    } catch {
-      alert('Gagal update status');
-    }
-  };
+  try {
+    const res = await fetch(`http://127.0.0.1:3000/reports/${id}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ status: nextStatus }),
+    });
+
+    const updated = await res.json();
+
+    setReports((prev) =>
+      prev.map((r) => (r.id === id ? updated : r))
+    );
+  } catch {
+    alert('Gagal update status');
+  }
+};
 
   // GET DATA
   useEffect(() => {
@@ -60,7 +68,7 @@ export default function AdminPage() {
     r.nama?.toLowerCase().includes(search.toLowerCase())
   );
 
-  // 🔥 LOGOUT FUNCTION
+  //  LOGOUT FUNCTION
   const handleLogout = () => {
     localStorage.removeItem('admin');
     window.location.href = 'http://localhost:3001/';
@@ -121,6 +129,8 @@ export default function AdminPage() {
               <p><b>Pelaku:</b> {r.pelaku || '-'}</p>
               <p><b>Laporan:</b> {r.laporan}</p>
 
+              {console.log(r.bukti)}
+
               {r.bukti && (
                 <img
                   src={`http://127.0.0.1:3000/${r.bukti}`}
@@ -147,7 +157,7 @@ export default function AdminPage() {
 
               <div style={{ marginTop: 10 }}>
                 <button
-                  onClick={() => updateStatus(r.id)}
+                  onClick={() => updateStatus(r.id, r.status)}
                   style={btnPrimary}
                 >
                   Ubah Status
