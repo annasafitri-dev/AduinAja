@@ -86,7 +86,7 @@ export default function AdminPage() {
 
       {/* CONTENT */}
       <div style={container}>
-        <h1>Dashboard Laporan</h1>
+        <h1 style={{ marginBottom: 20 }}> Dashboard Laporan</h1>
 
         {/* STAT */}
         <div style={statsContainer}>
@@ -133,7 +133,7 @@ export default function AdminPage() {
 
               {r.bukti && (
                 <img
-                  src={`http://127.0.0.1:3000/${r.bukti}`}
+                  src={`http://127.0.0.1:3000/uploads/${r.bukti}`}
                   style={image}
                 />
               )}
@@ -142,13 +142,22 @@ export default function AdminPage() {
                 <b>Status:</b>{' '}
                 <span
                   style={{
+                    padding: '5px 12px',
+                    borderRadius: 20,
+                    fontSize: 12,
+                    fontWeight: 'bold',
+                    backgroundColor:
+                      r.status === 'pending'
+                        ? '#fef3c7'
+                        : r.status === 'proses'
+                        ? '#dbeafe'
+                        : '#dcfce7',
                     color:
                       r.status === 'pending'
-                        ? '#f59e0b'
+                        ? '#b45309'
                         : r.status === 'proses'
-                        ? '#3b82f6'
-                        : '#16a34a',
-                    fontWeight: 'bold',
+                        ? '#1d4ed8'
+                        : '#166534',
                   }}
                 >
                   {r.status}
@@ -180,7 +189,7 @@ export default function AdminPage() {
 
 // STYLE
 const navbar = {
-  backgroundColor: '#1e3a8a',
+  background: 'linear-gradient(to right, #1e3a8a, #2563eb)',
   color: 'white',
   padding: '15px 30px',
   display: 'flex',
@@ -228,11 +237,12 @@ const searchInput = {
 
 const card = {
   border: '1px solid #e5e7eb',
-  borderRadius: 10,
-  marginBottom: 15,
-  padding: 15,
+  borderRadius: 12,
+  marginBottom: 20,
+  padding: 20,
   backgroundColor: 'white',
-  boxShadow: '0 2px 6px rgba(0,0,0,0.05)',
+  boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
+  transition: '0.2s',
 };
 
 const image = {
@@ -245,19 +255,19 @@ const image = {
 
 const btnPrimary = {
   marginRight: 10,
-  padding: '6px 12px',
+  padding: '8px 14px',
   backgroundColor: '#2563eb',
   color: 'white',
   border: 'none',
-  borderRadius: 5,
+  borderRadius: 8,
   cursor: 'pointer',
 };
 
 const btnDanger = {
-  padding: '6px 12px',
-  backgroundColor: '#dc2626',
+  padding: '8px 14px',
+  backgroundColor: '#ef4444',
   color: 'white',
   border: 'none',
-  borderRadius: 5,
+  borderRadius: 8,
   cursor: 'pointer',
 };
