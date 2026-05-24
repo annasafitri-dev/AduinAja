@@ -47,32 +47,34 @@ export class AppController {
     return report;
   }
 
-  // ✅ GET ALL
+  //  GET ALL
   @Get()
   async getReports() {
     return this.reportRepo.find();
   }
 
-  // ✅ DELETE
+  //  DELETE
   @Delete(':id')
   async deleteReport(@Param('id') id: number) {
     await this.reportRepo.delete(id);
     return { message: 'Laporan dihapus' };
   }
 
-  // ✅ UPDATE STATUS
-  @Patch(':id')
-  async updateStatus(@Param('id') id: number) {
-    const report = await this.reportRepo.findOneBy({ id });
+  //  UPDATE STATUS
+@Patch(':id')
+async updateStatus(
+  @Param('id') id: number,
+  @Body('status') status: string,
+) {
+  console.log('STATUS MASUK:', status); // wajib
 
-    if (!report) {
-      return { message: 'Data tidak ditemukan' };
-    }
+  const report = await this.reportRepo.findOneBy({ id });
 
-    report.status = report.status === 'pending' ? 'selesai' : 'pending';
+  if (!report) return { message: 'Data tidak ditemukan' };
 
-    await this.reportRepo.save(report);
+  report.status = status;
 
-    return report;
-  }
+  await this.reportRepo.save(report);
+
+  return report;
 }

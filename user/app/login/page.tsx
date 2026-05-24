@@ -3,11 +3,11 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
 export default function LoginPage() {
-  const [email, setEmail] = useState('anna');
-  const [password, setPassword] = useState('anna123');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const router = useRouter();
 
-  // 🔥 kalau sudah login, langsung ke admin
+  // redirect kalau sudah login
   useEffect(() => {
     const isLogin = localStorage.getItem('admin');
     if (isLogin) {
@@ -15,26 +15,14 @@ export default function LoginPage() {
     }
   }, []);
 
-  const handleLogin = async (e: any) => {
+  const handleLogin = (e: any) => {
     e.preventDefault();
 
-    try {
-      const res = await fetch('http://127.0.0.1:3000/auth/login', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email, password }),
-      });
-
-      const data = await res.json();
-
-      if (data.success) {
-        localStorage.setItem('admin', 'true');
-        window.location.href = 'http://localhost:3002/admin';
-      } else {
-        alert('Email / password salah');
-      }
-    } catch {
-      alert('Server error');
+    if (email === 'admin' && password === '123456') {
+      localStorage.setItem('admin', 'true');
+      window.location.href = 'http://localhost:3002/admin';
+    } else {
+      alert('Email / password salah');
     }
   };
 

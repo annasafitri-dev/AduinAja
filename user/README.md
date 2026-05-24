@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+📌 AduinAja!
+AduinAja! adalah aplikasi pelaporan sederhana berbasis web, di mana user bisa mengirim laporan dan admin dapat mengelola laporan tersebut.
 
-## Getting Started
+🚀 Fitur Utama
+👤 User
+Kirim laporan
+Upload bukti (gambar)
+Isi nama, pelaku, dan deskripsi laporan
 
-First, run the development server:
+🛠️ Admin
+Melihat semua laporan
+Mengubah status laporan:
+pending
+proses
+selesai
+Menghapus laporan
+Dashboard statistik:
+Total laporan
+Pending
+Proses
+Selesai
 
-```bash
+🏗️ Tech Stack
+Frontend
+Next.js
+React
+CSS (inline styling)
+Backend
+NestJS
+TypeORM
+SQLite
+Multer (upload file)
+
+📂 Struktur Folder
+AduinAja/
+├── api/        # Backend (NestJS)
+├── cms/        # Admin (Next.js)
+├── user/       # User website (Next.js)
+⚙️ Cara Menjalankan Project
+1. Backend (API)
+Masuk ke folder:
+cd api
+Install dependency:
+npm install
+Jalankan:
+npm run start:dev
+API berjalan di:
+http://localhost:3000
+2. Admin (CMS)
+Masuk ke folder:
+cd cms
+Install:
+npm install
+Run:
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Akses:
+http://localhost:3002/admin
+3. User Website
+Masuk ke folder:
+cd user
+Install:
+npm install
+Run:
+npm run dev
+🔄 Flow Status
+Status laporan berjalan seperti ini:
+pending → proses → selesai → (balik lagi pending)
+📸 Upload Gambar
+File bukti akan disimpan di:
+/api/uploads
+Dan diakses via:
+http://localhost:3000/{filename}
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🧪 Catatan
+Pastikan backend jalan dulu sebelum frontend
+Jika gambar tidak muncul:
+cek folder uploads
+cek URL gambar di browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+✨ Future Improvement
+Login admin (real auth, bukan localStorage)
+Preview gambar sebelum uploa
+UI lebih modern (Tailwind / component library)
+Pagination laporan
+Filter berdasarkan status
