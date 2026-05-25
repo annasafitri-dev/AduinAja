@@ -8,8 +8,8 @@ import { Report } from './report.entity';
     TypeOrmModule.forRoot({
       type: 'sqlite',
       database: 'db.sqlite',
-      autoLoadEntities: true,
-      synchronize: false, // 🔥 WAJIB FALSE (biar data tidak hilang lagi)
+      entities: [Report],
+      synchronize: true, // 🔥 WAJIB FALSE (biar data tidak hilang lagi)
     }),
     TypeOrmModule.forFeature([Report]),
   ],

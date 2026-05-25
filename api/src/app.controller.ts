@@ -61,20 +61,18 @@ export class AppController {
   }
 
   //  UPDATE STATUS
-@Patch(':id')
-async updateStatus(
-  @Param('id') id: number,
-  @Body('status') status: string,
-) {
-  console.log('STATUS MASUK:', status); // wajib
+  @Patch(':id')
+  async updateStatus(@Param('id') id: number, @Body('status') status: string) {
+    const report = await this.reportRepo.findOneBy({ id });
 
-  const report = await this.reportRepo.findOneBy({ id });
+    if (!report) {
+      return { message: 'Data tidak ditemukan' };
+    }
 
-  if (!report) return { message: 'Data tidak ditemukan' };
+    report.status = status;
 
-  report.status = status;
+    await this.reportRepo.save(report);
 
-  await this.reportRepo.save(report);
-
-  return report;
+    return report;
+  }
 }
