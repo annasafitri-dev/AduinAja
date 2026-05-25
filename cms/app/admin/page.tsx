@@ -1,11 +1,9 @@
 'use client';
 import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
 
 export default function AdminPage() {
   const [reports, setReports] = useState<any[]>([]);
   const [search, setSearch] = useState('');
-  const router = useRouter();
 
   // DELETE
   const deleteReport = async (id: number) => {
@@ -24,36 +22,41 @@ export default function AdminPage() {
 
   // UPDATE STATUS
   const updateStatus = async (id: number, currentStatus: string) => {
-  let nextStatus = 'pending';
+    let nextStatus = 'pending';
 
-  if (currentStatus === 'pending') nextStatus = 'proses';
-  else if (currentStatus === 'proses') nextStatus = 'selesai';
-  else nextStatus = 'pending';
+    if (currentStatus === 'pending') nextStatus = 'proses';
+    else if (currentStatus === 'proses') nextStatus = 'selesai';
+    else nextStatus = 'pending';
 
-  try {
-    const res = await fetch(`http://127.0.0.1:3000/reports/${id}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ status: nextStatus }),
-    });
+    try {
+      const res = await fetch(`http://127.0.0.1:3000/reports/${id}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ status: nextStatus }),
+      });
 
-    const updated = await res.json();
+      if (!res.ok) return alert('Gagal update');
 
-    setReports((prev) =>
-      prev.map((r) => (r.id === id ? updated : r))
-    );
-  } catch {
-    alert('Gagal update status');
-  }
-};
+      const updated = await res.json();
+
+      setReports((prev) =>
+        prev.map((r) => (r.id === id ? updated : r))
+      );
+    } catch {
+      alert('Error update');
+    }
+  };
 
   // GET DATA
   useEffect(() => {
     fetch('http://127.0.0.1:3000/reports')
       .then((res) => res.json())
       .then((data) => {
-        setReports(Array.isArray(data) ? data : data.data || []);
-      });
+        if (Array.isArray(data)) setReports(data);
+        else if (Array.isArray(data.data)) setReports(data.data);
+        else setReports([]);
+      })
+      .catch(() => setReports([]));
   }, []);
 
   // STAT
@@ -64,48 +67,39 @@ export default function AdminPage() {
 
   // SEARCH
   const filteredReports = reports.filter((r) =>
-    r.laporan.toLowerCase().includes(search.toLowerCase()) ||
+    r.laporan?.toLowerCase().includes(search.toLowerCase()) ||
     r.nama?.toLowerCase().includes(search.toLowerCase())
   );
-
-  //  LOGOUT FUNCTION
-  const handleLogout = () => {
-    localStorage.removeItem('admin');
-    window.location.href = 'http://localhost:3001/';
-  };
 
   return (
     <div>
       {/* NAVBAR */}
       <div style={navbar}>
         <h2>AduinAja! Admin</h2>
-        <button style={logoutBtn} onClick={handleLogout}>
-          Logout
-        </button>
       </div>
 
       {/* CONTENT */}
       <div style={container}>
-        <h1 style={{ marginBottom: 20 }}> Dashboard Laporan</h1>
+        <h1 style={{ marginBottom: 20 }}>Dashboard Laporan</h1>
 
         {/* STAT */}
         <div style={statsContainer}>
-          <div style={statCard}>
+          <div style={{ ...statCard, background: '#3b82f6' }}>
             <h3>Total</h3>
             <p>{total}</p>
           </div>
 
-          <div style={statCard}>
+          <div style={{ ...statCard, background: '#f59e0b' }}>
             <h3>Pending</h3>
             <p>{pending}</p>
           </div>
 
-          <div style={statCard}>
+          <div style={{ ...statCard, background: '#2563eb' }}>
             <h3>Proses</h3>
             <p>{proses}</p>
           </div>
 
-          <div style={statCard}>
+          <div style={{ ...statCard, background: '#16a34a' }}>
             <h3>Selesai</h3>
             <p>{selesai}</p>
           </div>
@@ -124,12 +118,21 @@ export default function AdminPage() {
           <p>Tidak ada laporan</p>
         ) : (
           filteredReports.map((r) => (
-            <div key={r.id} style={card}>
-              <p><b>Nama:</b> {r.nama}</p>
-              <p><b>Pelaku:</b> {r.pelaku || '-'}</p>
-              <p><b>Laporan:</b> {r.laporan}</p>
+            <div
+              key={r.id}
+              style={card}
+              onMouseEnter={(e) =>
+                (e.currentTarget.style.transform = 'scale(1.02)')
+              }
+              onMouseLeave={(e) =>
+                (e.currentTarget.style.transform = 'scale(1)')
+              }
+            >
+              <h3>{r.kategori}</h3>
+              <p style={{ color: '#666', fontSize: 13 }}>{r.lokasi}</p>
 
-              {console.log(r.bukti)}
+              <p><b>Nama:</b> {r.nama}</p>
+              <p><b>Laporan:</b> {r.laporan}</p>
 
               {r.bukti && (
                 <img
@@ -140,26 +143,7 @@ export default function AdminPage() {
 
               <p>
                 <b>Status:</b>{' '}
-                <span
-                  style={{
-                    padding: '5px 12px',
-                    borderRadius: 20,
-                    fontSize: 12,
-                    fontWeight: 'bold',
-                    backgroundColor:
-                      r.status === 'pending'
-                        ? '#fef3c7'
-                        : r.status === 'proses'
-                        ? '#dbeafe'
-                        : '#dcfce7',
-                    color:
-                      r.status === 'pending'
-                        ? '#b45309'
-                        : r.status === 'proses'
-                        ? '#1d4ed8'
-                        : '#166534',
-                  }}
-                >
+                <span style={statusStyle(r.status)}>
                   {r.status}
                 </span>
               </p>
@@ -168,6 +152,12 @@ export default function AdminPage() {
                 <button
                   onClick={() => updateStatus(r.id, r.status)}
                   style={btnPrimary}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.opacity = '0.8')
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.opacity = '1')
+                  }
                 >
                   Ubah Status
                 </button>
@@ -175,6 +165,12 @@ export default function AdminPage() {
                 <button
                   onClick={() => deleteReport(r.id)}
                   style={btnDanger}
+                  onMouseEnter={(e) =>
+                    (e.currentTarget.style.opacity = '0.8')
+                  }
+                  onMouseLeave={(e) =>
+                    (e.currentTarget.style.opacity = '1')
+                  }
                 >
                   Hapus
                 </button>
@@ -191,25 +187,15 @@ export default function AdminPage() {
 const navbar = {
   background: 'linear-gradient(to right, #1e3a8a, #2563eb)',
   color: 'white',
-  padding: '15px 30px',
-  display: 'flex',
-  justifyContent: 'space-between',
-  alignItems: 'center',
-};
-
-const logoutBtn = {
-  backgroundColor: 'white',
-  color: '#1e3a8a',
-  border: 'none',
-  padding: '6px 12px',
-  borderRadius: 6,
-  cursor: 'pointer',
+  padding: 15,
 };
 
 const container = {
   maxWidth: 900,
   margin: '30px auto',
   padding: 20,
+  background: '#f9fafb',
+  borderRadius: 12,
 };
 
 const statsContainer = {
@@ -220,11 +206,11 @@ const statsContainer = {
 
 const statCard = {
   flex: 1,
-  background: '#3b82f6',
-  color: 'white',
   padding: 15,
-  borderRadius: 10,
+  borderRadius: 12,
   textAlign: 'center' as const,
+  color: 'white',
+  fontWeight: 'bold',
 };
 
 const searchInput = {
@@ -237,20 +223,20 @@ const searchInput = {
 
 const card = {
   border: '1px solid #e5e7eb',
-  borderRadius: 12,
+  borderRadius: 16,
   marginBottom: 20,
   padding: 20,
   backgroundColor: 'white',
-  boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
-  transition: '0.2s',
+  boxShadow: '0 6px 18px rgba(0,0,0,0.08)',
+  transition: '0.3s',
 };
 
 const image = {
   width: '100%',
-  maxHeight: 200,
+  maxHeight: 220,
   objectFit: 'cover' as const,
   marginTop: 10,
-  borderRadius: 8,
+  borderRadius: 12,
 };
 
 const btnPrimary = {
@@ -261,6 +247,7 @@ const btnPrimary = {
   border: 'none',
   borderRadius: 8,
   cursor: 'pointer',
+  transition: '0.2s',
 };
 
 const btnDanger = {
@@ -270,4 +257,24 @@ const btnDanger = {
   border: 'none',
   borderRadius: 8,
   cursor: 'pointer',
+  transition: '0.2s',
 };
+
+const statusStyle = (status: string) => ({
+  padding: '5px 12px',
+  borderRadius: 20,
+  fontSize: 12,
+  fontWeight: 'bold',
+  backgroundColor:
+    status === 'pending'
+      ? '#fef3c7'
+      : status === 'proses'
+      ? '#dbeafe'
+      : '#dcfce7',
+  color:
+    status === 'pending'
+      ? '#b45309'
+      : status === 'proses'
+      ? '#1d4ed8'
+      : '#166534',
+});
