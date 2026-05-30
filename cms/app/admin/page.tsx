@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 export default function AdminPage() {
   const [reports, setReports] = useState<any[]>([]);
   const [search, setSearch] = useState('');
+  const [selectedReport, setSelectedReport] = useState<any>(null);
 
   // DELETE
   const deleteReport = async (id: number) => {
@@ -71,7 +72,7 @@ export default function AdminPage() {
     r.nama?.toLowerCase().includes(search.toLowerCase())
   );
 
-  return (
+  return(
     <div>
       {/* NAVBAR */}
       <div style={navbar}>
@@ -141,6 +142,7 @@ export default function AdminPage() {
                 />
               )}
 
+
               <p>
                 <b>Status:</b>{' '}
                 <span style={statusStyle(r.status)}>
@@ -174,11 +176,57 @@ export default function AdminPage() {
                 >
                   Hapus
                 </button>
+
+                <button
+                onClick={() => setSelectedReport(r)}
+                style={{
+                  marginLeft: 10,
+                  padding: '8px 14px',
+                  backgroundColor: '#10b981',
+                  color: 'white',
+                  border: 'none',
+                  borderRadius: 8,
+                  cursor: 'pointer',
+                }}
+              >
+                Lihat Detail
+              </button>
               </div>
             </div>
           ))
         )}
       </div>
+      {selectedReport && (
+  <div style={modalOverlay}>
+    <div style={modalContent}>
+      <h2>Detail Laporan</h2>
+
+      <p><b>Nama:</b> {selectedReport.nama}</p>
+      <p><b>Laporan:</b> {selectedReport.laporan}</p>
+      <p><b>Lokasi:</b> {selectedReport.lokasi}</p>
+      <p><b>Kategori:</b> {selectedReport.kategori}</p>
+      <p><b>Status:</b> {selectedReport.status}</p>
+
+      {selectedReport.bukti && (
+        <img
+          src={`http://127.0.0.1:3000/uploads/${selectedReport.bukti}`}
+          style={{
+            width: '100%',
+            borderRadius: 10,
+            marginTop: 10,
+          }}
+        />
+      )}
+
+      <button
+        onClick={() => setSelectedReport(null)}
+        style={btnClose}
+      >
+        Tutup
+      </button>
+    </div>
+  </div>
+)}
     </div>
   );
 }
@@ -278,3 +326,34 @@ const statusStyle = (status: string) => ({
       ? '#1d4ed8'
       : '#166534',
 });
+ const modalOverlay = {
+  position: 'fixed' as const,
+  top: 0,
+  left: 0,
+  right: 0,
+  bottom: 0,
+  backgroundColor: 'rgba(0,0,0,0.5)',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  zIndex: 1000,
+};
+
+const modalContent = {
+  backgroundColor: 'white',
+  padding: 25,
+  borderRadius: 12,
+  width: '90%',
+  maxWidth: 600,
+  boxShadow: '0 10px 30px rgba(0,0,0,0.2)',
+};
+
+const btnClose = {
+  marginTop: 15,
+  padding: '10px 16px',
+  backgroundColor: '#ef4444',
+  color: 'white',
+  border: 'none',
+  borderRadius: 8,
+  cursor: 'pointer',
+};
