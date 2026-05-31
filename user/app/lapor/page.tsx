@@ -52,7 +52,7 @@ export default function Lapor() {
         <form onSubmit={handleSubmit} style={form}>
 
           <input
-            placeholder="Nama (opsional)"
+            placeholder="Nama pelapor(opsional)"
             value={nama}
             onChange={(e) => setNama(e.target.value)}
             style={input}
@@ -84,9 +84,8 @@ export default function Lapor() {
           </select>
 
           <input
-            type="file"
-            onChange={(e) => setBukti(e.target.files?.[0] || null)}
-            style={{ marginTop: 10 }}
+          type="file"
+          onChange={(e) => setBukti(e.target.files?.[0] || null)}
           />
 
           <button type="submit" disabled={loading} style={button}>
