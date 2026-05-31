@@ -83,10 +83,12 @@ export default function Lapor() {
             <option value="infrastruktur">Infrastruktur</option>
           </select>
 
+          <div style={uploadBox}>
           <input
-          type="file"
-          onChange={(e) => setBukti(e.target.files?.[0] || null)}
+            type="file"
+            onChange={(e) => setBukti(e.target.files?.[0] || null)}
           />
+        </div>
 
           <button type="submit" disabled={loading} style={button}>
             {loading ? 'Mengirim...' : 'Kirim Laporan'}
