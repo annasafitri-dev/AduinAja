@@ -106,12 +106,12 @@ const container = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  background: '#f5f7fa', // beda dikit dari landing biar kontras
+  background: '#f5f7fa',
 };
 
 const content = {
   width: '100%',
-  maxWidth: 600, // 🔥 lebih besar dari sebelumnya
+  maxWidth: 600,
   background: 'white',
   padding: 30,
   borderRadius: 12,
@@ -133,6 +133,13 @@ const form = {
   flexDirection: 'column' as const,
 };
 
+const label = {
+  marginTop: 15,
+  marginBottom: 5,
+  fontWeight: 'bold',
+  color: '#374151',
+};
+
 const input = {
   marginTop: 10,
   padding: 12,
@@ -141,13 +148,22 @@ const input = {
   fontSize: 14,
 };
 
+const uploadBox = {
+  marginTop: 10,
+  padding: 15,
+  border: '2px dashed #93c5fd',
+  borderRadius: 10,
+  backgroundColor: '#eff6ff',
+};
+
 const button = {
-  marginTop: 15,
-  padding: 12,
-  backgroundColor: '#2b6cb0',
+  marginTop: 25,
+  padding: 14,
+  background: '#2563eb',
   color: 'white',
   border: 'none',
-  borderRadius: 8,
+  borderRadius: 10,
   fontSize: 16,
+  fontWeight: 'bold',
   cursor: 'pointer',
 };
