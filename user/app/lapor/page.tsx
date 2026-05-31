@@ -104,6 +104,20 @@ export default function Lapor() {
           />
         </div>
 
+        {bukti && (
+        <img
+          src={URL.createObjectURL(bukti)}
+          alt="preview"
+          style={{
+            width: '100%',
+            marginTop: 10,
+            borderRadius: 10,
+            maxHeight: 250,
+            objectFit: 'cover',
+          }}
+        />
+      )}
+
           <button
           type="submit"
           disabled={loading}
