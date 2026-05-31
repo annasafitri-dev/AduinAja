@@ -47,9 +47,8 @@ export default function Lapor() {
 
         <h1 style={title}>Buat Laporan</h1>
         <p style={subtitle}>
-          Isi form di bawah untuk menyampaikan laporan Anda
+          Sampaikan laporan Anda dengan lengkap agar dapat segera ditindaklanjuti.
         </p>
-
         <form onSubmit={handleSubmit} style={form}>
 
           <input
