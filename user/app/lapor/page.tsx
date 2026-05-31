@@ -104,9 +104,23 @@ export default function Lapor() {
           />
         </div>
 
-          <button type="submit" disabled={loading} style={button}>
-            {loading ? 'Mengirim...' : 'Kirim Laporan'}
-          </button>
+          <button
+          type="submit"
+          disabled={loading}
+          style={button}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.transform = 'translateY(-2px)';
+            e.currentTarget.style.boxShadow =
+              '0 12px 25px rgba(37,99,235,0.4)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.transform = 'translateY(0)';
+            e.currentTarget.style.boxShadow =
+              '0 8px 20px rgba(37,99,235,0.3)';
+          }}
+        >
+          {loading ? ' Mengirim...' : 'Kirim Laporan!'}
+        </button>
 
         </form>
 
@@ -173,12 +187,14 @@ const uploadBox = {
 
 const button = {
   marginTop: 25,
-  padding: 14,
-  background: '#2563eb',
+  padding: '14px 20px',
+  background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
   color: 'white',
   border: 'none',
-  borderRadius: 10,
+  borderRadius: 12,
   fontSize: 16,
   fontWeight: 'bold',
   cursor: 'pointer',
+  boxShadow: '0 8px 20px rgba(37,99,235,0.3)',
+  transition: 'all 0.3s ease',
 };
