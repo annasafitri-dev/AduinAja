@@ -106,7 +106,8 @@ const container = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  background: '#f5f7fa',
+  background:
+  'linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #60a5fa 100%)',,
 };
 
 const content = {
