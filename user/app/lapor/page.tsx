@@ -71,6 +71,11 @@ export default function Lapor() {
             onChange={(e) => setLokasi(e.target.value)}
             style={input}
           />
+          {bukti && (
+          <p style={{ marginTop: 8, color: '#2563eb' }}>
+            File: {bukti.name}
+          </p>
+          )}
 
           <select
             value={kategori}
@@ -107,7 +112,7 @@ const container = {
   justifyContent: 'center',
   alignItems: 'center',
   background:
-  'linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #60a5fa 100%)',,
+  'linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #60a5fa 100%)',
 };
 
 const content = {
