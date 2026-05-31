@@ -64,6 +64,15 @@ export default function Lapor() {
             onChange={(e) => setLaporan(e.target.value)}
             style={{ ...input, height: 120 }}
           />
+          <p
+          style={{
+            textAlign: 'right',
+            color: '#666',
+            fontSize: 12,
+          }}
+          >
+          {laporan.length}/500 karakter
+          </p>
 
           <input
             placeholder="Lokasi kejadian"
