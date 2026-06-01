@@ -99,12 +99,13 @@ const buttonPrimary = {
 };
 
 const buttonSecondary = {
-  padding: '12px 25px',
-  backgroundColor: 'transparent',
+  padding: '16px 32px',
+  background: 'transparent',
   color: 'white',
-  border: '1px solid white',
-  borderRadius: 8,
+  border: '2px solid rgba(255,255,255,0.5)',
+  borderRadius: 12,
   fontSize: 16,
+  fontWeight: 'bold',
   cursor: 'pointer',
 };
 
