@@ -111,7 +111,10 @@ const buttonSecondary = {
 
 const flow = {
   display: 'flex',
-  justifyContent: 'space-between',
-  fontSize: 14,
-  opacity: 0.9,
+  justifyContent: 'center',
+  gap: 20,
+  flexWrap: 'wrap' as const,
+  marginTop: 40,
+  fontSize: 15,
+  color: '#cbd5e1',
 };

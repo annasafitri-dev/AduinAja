@@ -2,6 +2,7 @@
 import { useState } from 'react';
 
 export default function Lapor() {
+
   const [nama, setNama] = useState('');
   const [laporan, setLaporan] = useState('');
   const [lokasi, setLokasi] = useState('');
@@ -45,9 +46,9 @@ export default function Lapor() {
     <div style={container}>
       <div style={content}>
 
-        <h1 style={title}>Buat Laporan</h1>
+        <h1 style={title}>Form Pengaduan Masyarakat</h1>
         <p style={subtitle}>
-          Sampaikan laporan Anda dengan lengkap agar dapat segera ditindaklanjuti.
+          Lengkapi informasi laporan dengan benar agar dapat diproses oleh admin.
         </p>
         <form onSubmit={handleSubmit} style={form}>
 
@@ -80,6 +81,58 @@ export default function Lapor() {
             onChange={(e) => setLokasi(e.target.value)}
             style={input}
           />
+
+          <div
+            style={{
+              display: 'flex',
+              gap: 10,
+              marginTop: 10,
+            }}
+          >
+            <button
+              type="button"
+              onClick={() => {
+                navigator.geolocation.getCurrentPosition((pos) => {
+                  setLokasi(
+                    `${pos.coords.latitude}, ${pos.coords.longitude}`
+                  );
+                });
+              }}
+              style={{
+                padding: '10px 15px',
+                borderRadius: 8,
+                border: 'none',
+                background: '#2563eb',
+                color: 'white',
+                cursor: 'pointer',
+              }}
+            >
+              Lokasi Saat Ini
+            </button>
+
+            <button
+              type="button"
+              onClick={() =>
+                window.open(
+                  `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                    lokasi
+                  )}`,
+                  '_blank'
+                )
+              }
+              style={{
+                padding: '10px 15px',
+                borderRadius: 8,
+                border: 'none',
+                background: '#16a34a',
+                color: 'white',
+                cursor: 'pointer',
+              }}
+            >
+              🗺️ Buka Google Maps
+            </button>
+          </div>
+
           {bukti && (
           <p style={{ marginTop: 8, color: '#2563eb' }}>
             File: {bukti.name}
@@ -149,21 +202,25 @@ const container = {
   justifyContent: 'center',
   alignItems: 'center',
   background:
-  'linear-gradient(135deg, #1e3a8a 0%, #2563eb 50%, #60a5fa 100%)',
+    'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%)',
+  padding: 30,
 };
 
 const content = {
   width: '100%',
-  maxWidth: 600,
-  background: 'white',
-  padding: 30,
-  borderRadius: 12,
-  boxShadow: '0 8px 20px rgba(0,0,0,0.1)',
+  maxWidth: 800,
+  background: 'rgba(255,255,255,0.95)',
+  backdropFilter: 'blur(15px)',
+  padding: 45,
+  borderRadius: 24,
+  boxShadow: '0 20px 60px rgba(0,0,0,0.25)',
 };
 
 const title = {
-  fontSize: 28,
-  marginBottom: 5,
+  fontSize: 36,
+  fontWeight: 700,
+  color: '#1e3a8a',
+  marginBottom: 10,
 };
 
 const subtitle = {
@@ -201,14 +258,14 @@ const uploadBox = {
 
 const button = {
   marginTop: 25,
-  padding: '14px 20px',
-  background: 'linear-gradient(135deg, #2563eb, #1d4ed8)',
+  padding: 16,
+  background:
+    'linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%)',
   color: 'white',
   border: 'none',
   borderRadius: 12,
   fontSize: 16,
   fontWeight: 'bold',
   cursor: 'pointer',
-  boxShadow: '0 8px 20px rgba(37,99,235,0.3)',
-  transition: 'all 0.3s ease',
+  boxShadow: '0 10px 25px rgba(37,99,235,0.35)',
 };
