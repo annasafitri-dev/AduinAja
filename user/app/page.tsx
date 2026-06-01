@@ -54,10 +54,16 @@ const container = {
 
 const content = {
   textAlign: 'center' as const,
-  maxWidth: 850, // 🔥 lebih lebar
-  padding: 40,
+  maxWidth: 850,
+  padding: 50,
   color: 'white',
+  background: 'rgba(255,255,255,0.08)',
+  backdropFilter: 'blur(20px)',
+  borderRadius: 24,
+  border: '1px solid rgba(255,255,255,0.15)',
+  boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
 };
+
 
 const title = {
   fontSize: 42, // 🔥 lebih besar
