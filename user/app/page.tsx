@@ -63,18 +63,20 @@ const content = {
   border: '1px solid rgba(255,255,255,0.15)',
   boxShadow: '0 20px 60px rgba(0,0,0,0.3)',
 };
-
-
 const title = {
-  fontSize: 42, // 🔥 lebih besar
-  fontWeight: 'bold',
-  marginBottom: 10,
+  fontSize: 68,
+  fontWeight: 800,
+  marginBottom: 15,
+  letterSpacing: '-2px',
 };
 
 const subtitle = {
-  fontSize: 18,
-  marginBottom: 30,
-  lineHeight: 1.6,
+  fontSize: 22,
+  marginBottom: 40,
+  lineHeight: 1.8,
+  color: '#e2e8f0',
+  maxWidth: 700,
+  margin: '0 auto 40px auto',
 };
 
 const buttonContainer = {
@@ -85,13 +87,15 @@ const buttonContainer = {
 };
 
 const buttonPrimary = {
-  padding: '12px 25px',
-  backgroundColor: 'white',
-  color: '#2b6cb0',
+  padding: '16px 32px',
+  background: '#ffffff',
+  color: '#1e40af',
   border: 'none',
-  borderRadius: 8,
+  borderRadius: 12,
   fontSize: 16,
+  fontWeight: 'bold',
   cursor: 'pointer',
+  boxShadow: '0 10px 30px rgba(255,255,255,0.25)',
 };
 
 const buttonSecondary = {
