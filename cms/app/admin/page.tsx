@@ -73,7 +73,7 @@ export default function AdminPage() {
   );
 
   return(
-    <div>
+    <div style={page}>
       {/* NAVBAR */}
       <div style={navbar}>
         <h2>AduinAja! Admin</h2>
@@ -81,9 +81,26 @@ export default function AdminPage() {
 
       {/* CONTENT */}
       <div style={container}>
-        <h1 style={{ marginBottom: 20 }}>Dashboard Laporan</h1>
+        <h1
+        style={{
+          fontSize: 36,
+          color: '#1e3a8a',
+          marginBottom: 10,
+        }}
+      >
+        Dashboard Laporan
+      </h1>
 
-        {/* STAT */}
+      <p
+        style={{
+          color: '#666',
+          marginBottom: 25,
+        }}
+      >
+        Kelola dan pantau seluruh laporan masyarakat.
+      </p>
+
+        {/* STAT */} 
         <div style={statsContainer}>
           <div style={{ ...statCard, background: '#3b82f6' }}>
             <h3>Total</h3>
@@ -105,6 +122,7 @@ export default function AdminPage() {
             <p>{selesai}</p>
           </div>
         </div>
+        
 
         {/* SEARCH */}
         <input
@@ -232,6 +250,14 @@ export default function AdminPage() {
 }
 
 // STYLE
+
+const page = {
+  minHeight: '100vh',
+  background:
+    'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%)',
+  padding: 30,
+};
+
 const navbar = {
   background: 'linear-gradient(to right, #1e3a8a, #2563eb)',
   color: 'white',
@@ -239,11 +265,13 @@ const navbar = {
 };
 
 const container = {
-  maxWidth: 900,
+  maxWidth: 1100,
   margin: '30px auto',
-  padding: 20,
-  background: '#f9fafb',
-  borderRadius: 12,
+  padding: 30,
+  background: 'rgba(255,255,255,0.95)',
+  backdropFilter: 'blur(15px)',
+  borderRadius: 24,
+  boxShadow: '0 20px 60px rgba(0,0,0,0.25)',
 };
 
 const statsContainer = {
