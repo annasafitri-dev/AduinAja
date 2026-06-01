@@ -3,6 +3,25 @@ import { useState } from 'react';
 
 export default function Lapor() {
 
+  const getCurrentLocation = () => {
+  navigator.geolocation.getCurrentPosition(async (pos) => {
+    const lat = pos.coords.latitude;
+    const lng = pos.coords.longitude;
+
+    try {
+      const res = await fetch(
+        `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}`
+      );
+
+      const data = await res.json();
+
+      setLokasi(data.display_name);
+    } catch {
+      setLokasi(`${lat}, ${lng}`);
+    }
+  });
+};
+
   const [nama, setNama] = useState('');
   const [laporan, setLaporan] = useState('');
   const [lokasi, setLokasi] = useState('');
@@ -91,13 +110,7 @@ export default function Lapor() {
           >
             <button
               type="button"
-              onClick={() => {
-                navigator.geolocation.getCurrentPosition((pos) => {
-                  setLokasi(
-                    `${pos.coords.latitude}, ${pos.coords.longitude}`
-                  );
-                });
-              }}
+              onClick={getCurrentLocation}
               style={{
                 padding: '10px 15px',
                 borderRadius: 8,
@@ -106,7 +119,7 @@ export default function Lapor() {
                 color: 'white',
                 cursor: 'pointer',
               }}
-            >
+              >
               Lokasi Saat Ini
             </button>
 
@@ -129,7 +142,7 @@ export default function Lapor() {
                 cursor: 'pointer',
               }}
             >
-              🗺️ Buka Google Maps
+              Buka Google Maps
             </button>
           </div>
 
