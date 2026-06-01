@@ -29,7 +29,27 @@ export default function LoginPage() {
   return (
     <div style={container}>
       <form onSubmit={handleLogin} style={card}>
-        <h2 style={{ textAlign: 'center' }}>Login Admin</h2>
+        <div style={{ textAlign: 'center', marginBottom: 20 }}>
+        <div style={{ fontSize: 50 }}></div>
+
+        <h2
+          style={{
+            color: '#1e3a8a',
+            marginBottom: 10,
+          }}
+        >
+          Login Admin
+        </h2>
+
+        <p
+          style={{
+            color: '#666',
+            fontSize: 14,
+          }}
+        >
+          Masuk untuk mengelola laporan masyarakat.
+        </p>
+      </div>
 
         <input
           placeholder="Email"
@@ -60,15 +80,21 @@ const container = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  background: '#e0e7ff',
+  background:
+    'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%)',
+  padding: 30,
 };
 
 const card = {
-  background: 'white',
-  padding: 30,
-  borderRadius: 10,
-  width: 300,
+  background: 'rgba(255,255,255,0.95)',
+  backdropFilter: 'blur(15px)',
+  padding: 40,
+  borderRadius: 24,
+  width: '100%',
+  maxWidth: 420,
+  boxShadow: '0 20px 60px rgba(0,0,0,0.25)',
 };
+
 
 const input = {
   width: '100%',
