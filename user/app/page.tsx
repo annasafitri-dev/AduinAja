@@ -7,6 +7,10 @@ export default function Home() {
     <div style={container}>
       <div style={content}>
         
+        <div style={badge}>
+        Platform Pengaduan Digital
+        </div>
+
         <h1 style={title}>AduinAja!</h1>
 
         <p style={subtitle}>
@@ -28,6 +32,16 @@ export default function Home() {
   );
 }
 
+const badge = {
+  display: 'inline-block',
+  padding: '8px 16px',
+  background: 'rgba(255,255,255,0.2)',
+  borderRadius: 20,
+  marginBottom: 20,
+  fontSize: 14,
+  backdropFilter: 'blur(10px)',
+};
+
 const container = {
   minHeight: '100vh',
   display: 'flex',
@@ -38,8 +52,8 @@ const container = {
 
 const content = {
   textAlign: 'center' as const,
-  maxWidth: 700, // 🔥 lebih lebar
-  padding: 20,
+  maxWidth: 850, // 🔥 lebih lebar
+  padding: 40,
   color: 'white',
 };
 
