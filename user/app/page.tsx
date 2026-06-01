@@ -47,7 +47,9 @@ const container = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  background: 'linear-gradient(135deg, #4facfe, #00c6ff)',
+  background:
+    'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%)',
+  padding: 20,
 };
 
 const content = {
