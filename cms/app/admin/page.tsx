@@ -75,23 +75,30 @@ export default function AdminPage() {
 
   return(
     <div style={navbar}>
-      <h2>AduinAja! Admin</h2>
+  <h2>AduinAja! Admin</h2>
 
-      <button
-        onClick={() => window.location.href = '/'}
-        style={{
-          background: 'white',
-          color: '#1e3a8a',
-          border: 'none',
-          padding: '10px 16px',
-          borderRadius: 8,
-          cursor: 'pointer',
-          fontWeight: 'bold',
-        }}
-      >
-        ← Kembali ke Home
-      </button>
-    </div>
+  <div style={{ display: 'flex', gap: 10 }}>
+    <button
+      onClick={() => window.location.href = '/'}
+      style={navButton}
+    >
+      ← Home
+    </button>
+
+    <button
+      onClick={() => {
+        localStorage.removeItem('admin');
+        window.location.href = '/login';
+      }}
+      style={{
+        ...navButton,
+        backgroundColor: '#ef4444',
+      }}
+    >
+      Logout
+    </button>
+  </div>
+</div>
 
       {/* CONTENT */}
       <div style={container}>
