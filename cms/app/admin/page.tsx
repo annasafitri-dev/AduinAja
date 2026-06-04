@@ -74,31 +74,32 @@ export default function AdminPage() {
   );
 
   return(
+    <div style={page}>
     <div style={navbar}>
-  <h2>AduinAja! Admin</h2>
+        <h2>AduinAja! Admin</h2>
 
-  <div style={{ display: 'flex', gap: 10 }}>
-    <button
-      onClick={() => window.location.href = '/'}
-      style={navButton}
-    >
-      ← Home
-    </button>
+        <div style={{ display: 'flex', gap: 10 }}>
+          <button
+            onClick={() => window.location.href = '/'}
+            style={navButton}
+          >
+            ← Home
+          </button>
 
-    <button
-      onClick={() => {
-        localStorage.removeItem('admin');
-        window.location.href = '/login';
-      }}
-      style={{
-        ...navButton,
-        backgroundColor: '#ef4444',
-      }}
-    >
-      Logout
-    </button>
-  </div>
-</div>
+          <button
+            onClick={() => {
+              localStorage.removeItem('admin');
+              window.location.href = '/login';
+            }}
+            style={{
+              ...navButton,
+              backgroundColor: '#ef4444',
+            }}
+          >
+            Logout
+          </button>
+        </div>
+      </div>
 
       {/* CONTENT */}
       <div style={container}>
@@ -235,40 +236,40 @@ export default function AdminPage() {
           ))
         )}
       </div>
-      {selectedReport && (
-  <div style={modalOverlay}>
-    <div style={modalContent}>
-      <h2>Detail Laporan</h2>
+    {selectedReport && (
+        <div style={modalOverlay}>
+          <div style={modalContent}>
+            <h2>Detail Laporan</h2>
 
-      <p><b>Nama:</b> {selectedReport.nama}</p>
-      <p><b>Laporan:</b> {selectedReport.laporan}</p>
-      <p><b>Lokasi:</b> {selectedReport.lokasi}</p>
-      <p><b>Kategori:</b> {selectedReport.kategori}</p>
-      <p><b>Status:</b> {selectedReport.status}</p>
+            <p><b>Nama:</b> {selectedReport.nama}</p>
+            <p><b>Laporan:</b> {selectedReport.laporan}</p>
+            <p><b>Lokasi:</b> {selectedReport.lokasi}</p>
+            <p><b>Kategori:</b> {selectedReport.kategori}</p>
+            <p><b>Status:</b> {selectedReport.status}</p>
 
-      {selectedReport.bukti && (
-        <img
-          src={`http://127.0.0.1:3000/uploads/${selectedReport.bukti}`}
-          style={{
-            width: '100%',
-            borderRadius: 10,
-            marginTop: 10,
-          }}
-        />
+            {selectedReport.bukti && (
+              <img
+                src={`http://127.0.0.1:3000/uploads/${selectedReport.bukti}`}
+                style={{
+                  width: '100%',
+                  borderRadius: 10,
+                  marginTop: 10,
+                }}
+              />
+            )}
+
+            <button
+              onClick={() => setSelectedReport(null)}
+              style={btnClose}
+            >
+              Tutup
+            </button>
+          </div>
+        </div>
       )}
-
-      <button
-        onClick={() => setSelectedReport(null)}
-        style={btnClose}
-      >
-        Tutup
-      </button>
-    </div>
-  </div>
-)}
     </div>
   );
-}
+};
 
 // STYLE
 
@@ -286,6 +287,15 @@ const navbar = {
   display: 'flex',
   justifyContent: 'space-between',
   alignItems: 'center',
+};
+
+const navButton = {
+  padding: '8px 12px',
+  backgroundColor: '#ffffff22',
+  color: 'white',
+  border: 'none',
+  borderRadius: 8,
+  cursor: 'pointer',
 };
 
 const container = {
