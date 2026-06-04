@@ -1,13 +1,13 @@
-📌 AduinAja!
+AduinAja!
 AduinAja! adalah aplikasi pelaporan sederhana berbasis web, di mana user bisa mengirim laporan dan admin dapat mengelola laporan tersebut.
 
-🚀 Fitur Utama
-👤 User
+Fitur Utama
+User
 Kirim laporan
 Upload bukti (gambar)
 Isi nama, pelaku, dan deskripsi laporan
 
-🛠️ Admin
+Admin
 Melihat semua laporan
 Mengubah status laporan:
 pending
@@ -20,7 +20,7 @@ Pending
 Proses
 Selesai
 
-🏗️ Tech Stack
+Tech Stack
 Frontend
 Next.js
 React
@@ -31,7 +31,7 @@ TypeORM
 SQLite
 Multer (upload file)
 
-📂 Struktur Folder
+Struktur Folder
 AduinAja/
 ├── api/        # Backend (NestJS)
 ├── cms/        # Admin (Next.js)
@@ -62,7 +62,7 @@ Install:
 npm install
 Run:
 npm run dev
-🔄 Flow Status
+Flow Status
 Status laporan berjalan seperti ini:
 pending → proses → selesai → (balik lagi pending)
 📸 Upload Gambar
@@ -71,15 +71,15 @@ File bukti akan disimpan di:
 Dan diakses via:
 http://localhost:3000/{filename}
 
-🧪 Catatan
+Catatan
 Pastikan backend jalan dulu sebelum frontend
 Jika gambar tidak muncul:
 cek folder uploads
 cek URL gambar di browser
 
-✨ Future Improvement
+Future Improvement
 Login admin (real auth, bukan localStorage)
 Preview gambar sebelum uploa
 UI lebih modern (Tailwind / component library)
 Pagination laporan
-Filter berdasarkan status
+Filter berdasarkan  status
