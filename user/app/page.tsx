@@ -22,7 +22,7 @@ export default function Home() {
             <button style={buttonPrimary}>Buat Laporan</button>
           </Link>
 
-          <Link href="/login">
+          <Link href="/admin">
             <button style={buttonSecondary}>Login Admin</button>
           </Link>
         </div>
