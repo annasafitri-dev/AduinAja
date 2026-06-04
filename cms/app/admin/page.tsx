@@ -9,18 +9,27 @@ export default function AdminPage() {
 
   // DELETE
   const deleteReport = async (id: number) => {
-    try {
-      const res = await fetch(`http://127.0.0.1:3000/reports/${id}`, {
-        method: 'DELETE',
-      });
+  const yakin = confirm('Yakin ingin menghapus laporan?');
 
-      if (!res.ok) return alert('Gagal hapus');
+  if (!yakin) return;
 
-      setReports((prev) => prev.filter((r) => r.id !== id));
-    } catch {
-      alert('Error hapus');
+  try {
+    const res = await fetch(`http://127.0.0.1:3000/reports/${id}`, {
+      method: 'DELETE',
+    });
+
+    if (!res.ok) {
+      alert('Gagal hapus');
+      return;
     }
-  };
+
+    setReports((prev) => prev.filter((r) => r.id !== id));
+
+    alert('Laporan berhasil dihapus');
+  } catch {
+    alert('Error hapus');
+  }
+};
 
   // UPDATE STATUS
   const updateStatus = async (id: number, currentStatus: string) => {
