@@ -5,6 +5,7 @@ export default function AdminPage() {
   const [reports, setReports] = useState<any[]>([]);
   const [search, setSearch] = useState('');
   const [selectedReport, setSelectedReport] = useState<any>(null);
+  
 
   // DELETE
   const deleteReport = async (id: number) => {
@@ -73,11 +74,24 @@ export default function AdminPage() {
   );
 
   return(
-    <div style={page}>
-      {/* NAVBAR */}
-      <div style={navbar}>
-        <h2>AduinAja! Admin</h2>
-      </div>
+    <div style={navbar}>
+      <h2>AduinAja! Admin</h2>
+
+      <button
+        onClick={() => window.location.href = '/'}
+        style={{
+          background: 'white',
+          color: '#1e3a8a',
+          border: 'none',
+          padding: '10px 16px',
+          borderRadius: 8,
+          cursor: 'pointer',
+          fontWeight: 'bold',
+        }}
+      >
+        ← Kembali ke Home
+      </button>
+    </div>
 
       {/* CONTENT */}
       <div style={container}>
@@ -262,6 +276,9 @@ const navbar = {
   background: 'linear-gradient(to right, #1e3a8a, #2563eb)',
   color: 'white',
   padding: 15,
+  display: 'flex',
+  justifyContent: 'space-between',
+  alignItems: 'center',
 };
 
 const container = {
