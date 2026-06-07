@@ -6,6 +6,7 @@ export default function AdminPage() {
   const [search, setSearch] = useState('');
   const [selectedReport, setSelectedReport] = useState<any>(null);
   const [filterStatus, setFilterStatus] = useState('semua');
+  const [filterKategori, setFilterKategori] = useState('semua');
 
   // DELETE
   const deleteReport = async (id: number) => {
@@ -196,6 +197,19 @@ export default function AdminPage() {
           <option value="proses">Proses</option>
           <option value="selesai">Selesai</option>
         </select>
+
+        {/* filter kategori */} 
+        <select
+          value={filterKategori}
+          onChange={(e) => setFilterKategori(e.target.value)}
+          style={{
+            padding: 10,
+            borderRadius: 8,
+            border: '1px solid #ccc',
+            marginLeft: 10,
+          }}
+        >
+          >
 
       {/* JUMLAH LAPORAN */}
         <p style={{ marginTop: 10, marginBottom: 15 }}>
