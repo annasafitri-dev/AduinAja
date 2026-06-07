@@ -172,6 +172,7 @@ export default function AdminPage() {
           onChange={(e) => setSearch(e.target.value)}
           style={searchInput}
         />
+        {/* filter status */}
         <select
           value={filterStatus}
           onChange={(e) => setFilterStatus(e.target.value)}
@@ -188,6 +189,11 @@ export default function AdminPage() {
           <option value="proses">Proses</option>
           <option value="selesai">Selesai</option>
         </select>
+
+      {/* JUMLAH LAPORAN */}
+        <p style={{ marginTop: 10, marginBottom: 15 }}>
+          Menampilkan {filteredReports.length} laporan
+        </p>
 
         {/* LIST */}
         {filteredReports.length === 0 ? (
