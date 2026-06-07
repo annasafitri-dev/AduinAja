@@ -103,6 +103,16 @@ export default function AdminPage() {
           <p style={{ margin: 0, fontSize: 18 }}>
             {new Date().toLocaleDateString('id-ID')}
           </p>
+
+        <p
+          style={{
+            margin: 0,
+            fontSize: 14,
+            color: '#ddd',
+          }}
+        >
+           {new Date().toLocaleTimeString('id-ID')}
+        </p>
         </div>
 
         <div style={{ display: 'flex', gap: 10 }}>
