@@ -209,7 +209,12 @@ export default function AdminPage() {
             marginLeft: 10,
           }}
         >
-          >
+        <option value="semua">Semua Kategori</option>
+          <option value="Jalan Rusak">Jalan Rusak</option>
+          <option value="Sampah">Sampah</option>
+          <option value="Lampu Jalan">Lampu Jalan</option>
+          <option value="Banjir">Banjir</option>
+        </select>
 
       {/* JUMLAH LAPORAN */}
         <p style={{ marginTop: 10, marginBottom: 15 }}>
