@@ -88,7 +88,11 @@ export default function AdminPage() {
     filterStatus === 'semua' ||
     r.status === filterStatus;
 
-  return cocokSearch && cocokStatus;
+  const cocokKategori =
+    filterKategori === 'semua' ||
+    r.kategori === filterKategori;
+
+  return cocokSearch && cocokStatus && cocokKategori;
 });
 
   return(
