@@ -98,7 +98,12 @@ export default function AdminPage() {
   return(
     <div style={page}>
     <div style={navbar}>
-        <h2>AduinAja! Admin</h2>
+        <div>
+          <h1><b>Selamat Datang, Admin</b></h1>
+          <p style={{ margin: 0, fontSize: 18 }}>
+            {new Date().toLocaleDateString('id-ID')}
+          </p>
+        </div>
 
         <div style={{ display: 'flex', gap: 10 }}>
           <button
