@@ -98,14 +98,16 @@ export default function AdminPage() {
 
           <button
             onClick={() => {
-              localStorage.removeItem('admin');
-              window.location.href = 'http://localhost:3001/login';
+              if (confirm('Yakin ingin logout?')) {
+                localStorage.removeItem('admin');
+                window.location.href = 'http://localhost:3001/login';
+              }
             }}
             style={{
               ...navButton,
               backgroundColor: '#ef4444',
             }}
-          >
+          >   
             Logout
           </button>
         </div>
