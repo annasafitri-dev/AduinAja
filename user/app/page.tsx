@@ -43,6 +43,7 @@ export default function Home() {
           background: '#1e3a8a',
           color: 'white',
           marginTop: '50px',
+          width: '100%',
         }}
       >
         <div>
@@ -74,7 +75,7 @@ export default function Home() {
           <p>📷 @kemkomdigi</p>
         </div>
       </footer>
-    </div>
+          </div>
   );
 }
 
@@ -91,16 +92,17 @@ const badge = {
 const container = {
   minHeight: '100vh',
   display: 'flex',
-  justifyContent: 'center',
+  flexDirection: 'column' as const,
   alignItems: 'center',
   background:
     'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%)',
-  padding: 20,
 };
 
 const content = {
   textAlign: 'center' as const,
   maxWidth: 850,
+  width: '100%',
+  marginTop: 80,
   padding: 50,
   color: 'white',
   background: 'rgba(255,255,255,0.08)',
