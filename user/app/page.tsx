@@ -13,6 +13,13 @@ export default function Home() {
 
         <h1 style={title}>AduinAja!</h1>
 
+        <hr
+          style={{
+            margin: '10px 0',
+            border: '2px solid #e5e7eb',
+          }}
+        />
+
         <p style={subtitle}>
           Platform pengaduan masyarakat untuk menyampaikan laporan secara cepat, aman, dan terstruktur.
         </p>
@@ -22,12 +29,51 @@ export default function Home() {
             <button style={buttonPrimary}>Buat Laporan</button>
           </Link>
 
-          <Link href="/admin">
+          <Link href="http://localhost:3001/login">
             <button style={buttonSecondary}>Login Admin</button>
           </Link>
         </div>
-
       </div>
+
+      <footer
+        style={{
+          display: 'flex',
+          justifyContent: 'space-around',
+          padding: '40px',
+          background: '#1e3a8a',
+          color: 'white',
+          marginTop: '50px',
+        }}
+      >
+        <div>
+          <h3>
+            <a
+              href="/about"
+              style={{ color: 'white', textDecoration: 'none' }}
+            >
+              Tentang Kami
+            </a>
+          </h3>
+        </div>
+
+        <div>
+          <h3>
+            <a
+              href="/contact"
+              style={{ color: 'white', textDecoration: 'none' }}
+            >
+              Kontak
+            </a>
+          </h3>
+        </div>
+
+        <div>
+          <h3>Ikuti Kami</h3>
+          <p>📺 KemkomdigiTV</p>
+          <p>📱 Kemkomdigi</p>
+          <p>📷 @kemkomdigi</p>
+        </div>
+      </footer>
     </div>
   );
 }
