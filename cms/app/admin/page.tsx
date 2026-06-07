@@ -104,6 +104,13 @@ export default function AdminPage() {
           </button>
 
           <button
+            onClick={() => window.location.reload()}
+            style={navButton}
+          >
+            Refresh
+          </button>
+
+          <button
             onClick={() => {
               if (confirm('Yakin ingin logout?')) {
                 localStorage.removeItem('admin');
