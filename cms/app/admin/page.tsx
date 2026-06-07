@@ -348,6 +348,23 @@ export default function AdminPage() {
         >
           © 2026 AduinAja! - Sistem Pengaduan Masyarakat
         </footer>
+
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          style={{
+            position: 'fixed',
+            bottom: 20,
+            right: 20,
+            padding: '10px 15px',
+            borderRadius: 10,
+            border: 'none',
+            backgroundColor: '#2563eb',
+            color: 'white',
+            cursor: 'pointer',
+          }}
+        >
+          ⬆️
+        </button>
       </div>  
   );
 };
