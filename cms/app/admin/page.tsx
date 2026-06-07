@@ -167,6 +167,12 @@ export default function AdminPage() {
       >
         Kelola dan pantau seluruh laporan masyarakat.
       </p>
+      <hr
+        style={{
+          margin: '20px 0',
+          border: '1px solid #e5e7eb',
+        }}
+      />
 
         {/* STAT */} 
         <div style={statsContainer}>
@@ -190,6 +196,13 @@ export default function AdminPage() {
             <p>{selesai}</p>
           </div>
         </div>
+
+        <hr
+        style={{
+          margin: '20px 0',
+          border: '1px solid #e5e7eb',
+        }}
+      />
         
 
         {/* SEARCH */}
