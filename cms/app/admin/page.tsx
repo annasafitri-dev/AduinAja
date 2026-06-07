@@ -213,11 +213,11 @@ export default function AdminPage() {
             marginLeft: 10,
           }}
         >
-        <option value="semua">Semua Kategori</option>
-          <option value="Jalan Rusak">Lingkungan</option>
-          <option value="Sampah">Keamanan</option>
-          <option value="Lampu Jalan">Infrastruktur</option>
-        </select>
+        <option value="">Semua kategori</option>
+            <option value="lingkungan">Lingkungan</option>
+            <option value="keamanan">Keamanan</option>
+            <option value="infrastruktur">Infrastruktur</option>
+          </select>
 
       {/* JUMLAH LAPORAN */}
         <p style={{ marginTop: 10, marginBottom: 15 }}>
