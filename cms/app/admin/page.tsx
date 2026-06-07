@@ -90,7 +90,7 @@ export default function AdminPage() {
 
         <div style={{ display: 'flex', gap: 10 }}>
           <button
-            onClick={() => window.location.href = '/'}
+            onClick={() => window.location.href = 'http://localhost:3002'}
             style={navButton}
           >
             ← Home
@@ -99,7 +99,7 @@ export default function AdminPage() {
           <button
             onClick={() => {
               localStorage.removeItem('admin');
-              window.location.href = '/login';
+              window.location.href = 'http://localhost:3001/login';
             }}
             style={{
               ...navButton,
