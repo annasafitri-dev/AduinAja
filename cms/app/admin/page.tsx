@@ -5,7 +5,7 @@ export default function AdminPage() {
   const [reports, setReports] = useState<any[]>([]);
   const [search, setSearch] = useState('');
   const [selectedReport, setSelectedReport] = useState<any>(null);
-  
+  const [filterStatus, setFilterStatus] = useState('semua');
 
   // DELETE
   const deleteReport = async (id: number) => {
@@ -78,10 +78,17 @@ export default function AdminPage() {
   const selesai = reports.filter((r) => r.status === 'selesai').length;
 
   // SEARCH
-  const filteredReports = reports.filter((r) =>
+  const filteredReports = reports.filter((r) => {
+  const cocokSearch =
     r.laporan?.toLowerCase().includes(search.toLowerCase()) ||
-    r.nama?.toLowerCase().includes(search.toLowerCase())
-  );
+    r.nama?.toLowerCase().includes(search.toLowerCase());
+
+  const cocokStatus =
+    filterStatus === 'semua' ||
+    r.status === filterStatus;
+
+  return cocokSearch && cocokStatus;
+});
 
   return(
     <div style={page}>
@@ -165,6 +172,22 @@ export default function AdminPage() {
           onChange={(e) => setSearch(e.target.value)}
           style={searchInput}
         />
+        <select
+          value={filterStatus}
+          onChange={(e) => setFilterStatus(e.target.value)}
+          style={{
+            padding: 10,
+            borderRadius: 8,
+            border: '1px solid #ccc',
+            marginBottom: 20,
+            marginLeft: 10,
+          }}
+        >
+          <option value="semua">Semua</option>
+          <option value="pending">Pending</option>
+          <option value="proses">Proses</option>
+          <option value="selesai">Selesai</option>
+        </select>
 
         {/* LIST */}
         {filteredReports.length === 0 ? (
