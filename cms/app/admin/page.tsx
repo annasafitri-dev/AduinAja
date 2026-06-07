@@ -337,7 +337,18 @@ export default function AdminPage() {
           </div>
         </div>
       )}
-    </div>
+      {/* Footer */}
+    <footer
+          style={{
+            textAlign: 'center',
+            marginTop: 30,
+            color: 'white',
+            padding: 20,
+          }}
+        >
+          © 2026 AduinAja! - Sistem Pengaduan Masyarakat
+        </footer>
+      </div>  
   );
 };
 
@@ -489,3 +500,4 @@ const btnClose = {
   borderRadius: 8,
   cursor: 'pointer',
 };
+
