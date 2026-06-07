@@ -214,10 +214,9 @@ export default function AdminPage() {
           }}
         >
         <option value="semua">Semua Kategori</option>
-          <option value="Jalan Rusak">Jalan Rusak</option>
-          <option value="Sampah">Sampah</option>
-          <option value="Lampu Jalan">Lampu Jalan</option>
-          <option value="Banjir">Banjir</option>
+          <option value="Jalan Rusak">Lingkungan</option>
+          <option value="Sampah">Keamanan</option>
+          <option value="Lampu Jalan">Infrastruktur</option>
         </select>
 
       {/* JUMLAH LAPORAN */}
