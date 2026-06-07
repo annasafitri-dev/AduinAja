@@ -233,7 +233,7 @@ export default function AdminPage() {
         {filteredReports.length === 0 ? (
           <p>Tidak ada laporan</p>
         ) : (
-          filteredReports.map((r) => (
+          filteredReports.map((r, index) => (
               <div
                 key={r.id}
                 style={card}
@@ -248,6 +248,7 @@ export default function AdminPage() {
                     '0 6px 18px rgba(0,0,0,0.08)';
                 }}
               >
+              <p><b>No:</b> {index + 1}</p>
               <h3>{r.kategori}</h3>
               <p style={{ color: '#666', fontSize: 13 }}>{r.lokasi}</p>
 
