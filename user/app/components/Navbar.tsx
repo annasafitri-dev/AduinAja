@@ -10,7 +10,7 @@ export default function Navbar() {
       <div style={menu}>
         <Link href="/" style={link}>Home</Link>
         <Link href="/lapor" style={link}>Lapor</Link>
-        <Link href="/admin" style={link}>Login</Link>
+        <Link href="/login" style={link}>Login</Link>
       </div>
     </div>
   );

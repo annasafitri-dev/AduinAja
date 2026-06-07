@@ -10,7 +10,7 @@ export default function LoginPage() {
   useEffect(() => {
     const isLogin = localStorage.getItem('admin');
     if (isLogin) {
-      window.location.href = 'http://localhost:3001/admin';
+      window.location.href = '/admin';
     }
   }, []);
 
@@ -19,7 +19,7 @@ export default function LoginPage() {
 
     if (email === 'admin' && password === '123456') {
       localStorage.setItem('admin', 'true');
-      window.location.href = 'http://localhost:3001/admin';
+      window.location.href = '/admin';
     } else {
       alert('Email / password salah');
     }

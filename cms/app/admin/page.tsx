@@ -58,6 +58,7 @@ export default function AdminPage() {
     }
   };
 
+  
   // GET DATA
   useEffect(() => {
     fetch('http://127.0.0.1:3000/reports')
