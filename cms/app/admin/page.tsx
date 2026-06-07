@@ -107,7 +107,7 @@ export default function AdminPage() {
             onClick={() => window.location.reload()}
             style={navButton}
           >
-            Refresh
+            🔄Refresh
           </button>
 
           <button
