@@ -6,6 +6,9 @@ export default function LoginPage() {
   const [password, setPassword] = useState('');
   
 
+  useEffect(() => {
+  console.log(localStorage.getItem('admin'));
+  }, []); 
   // redirect kalau sudah login
   useEffect(() => {
     const isLogin = localStorage.getItem('admin');
