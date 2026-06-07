@@ -1,116 +1,30 @@
 'use client';
-import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 
-export default function LoginPage() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const router = useRouter();
+import { useEffect } from 'react';
 
-  // redirect kalau sudah login
+export default function AdminPage() {
   useEffect(() => {
     const isLogin = localStorage.getItem('admin');
-    if (isLogin) {
-      window.location.href = 'http://localhost:3002/admin';
+
+    if (!isLogin) {
+      window.location.href = '/login';
     }
   }, []);
 
-  const handleLogin = (e: any) => {
-    e.preventDefault();
-
-    if (email === 'admin' && password === '123456') {
-      localStorage.setItem('admin', 'true');
-      window.location.href = 'http://localhost:3002/admin';
-    } else {
-      alert('Email / password salah');
-    }
-  };
-
   return (
-    <div style={container}>
-      <form onSubmit={handleLogin} style={card}>
-        <div style={{ textAlign: 'center', marginBottom: 20 }}>
-        <div style={{ fontSize: 50 }}></div>
+    <div>
+      <h1>Dashboard Admin</h1>
 
-        <h2
-          style={{
-            color: '#1e3a8a',
-            marginBottom: 10,
-          }}
-        >
-          Login Admin
-        </h2>
+      <button
+        onClick={() => {
+          localStorage.removeItem('admin');
+          window.location.href = '/login';
+        }}
+      >
+        Logout
+      </button>
 
-        <p
-          style={{
-            color: '#666',
-            fontSize: 14,
-          }}
-        >
-          Masuk untuk mengelola laporan masyarakat.
-        </p>
-      </div>
-
-        <input
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          style={input}
-        />
-
-        <input
-          type="password"
-          placeholder="Password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          style={input}
-        />
-
-        <button type="submit" style={button}>
-          Login
-        </button>
-      </form>
+      {/* Semua kode laporan, statistik, search, dll taruh di sini */}
     </div>
   );
 }
-
-// STYLE
-const container = {
-  minHeight: '100vh',
-  display: 'flex',
-  justifyContent: 'center',
-  alignItems: 'center',
-  background:
-    'linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #2563eb 100%)',
-  padding: 30,
-};
-
-const card = {
-  background: 'rgba(255,255,255,0.95)',
-  backdropFilter: 'blur(15px)',
-  padding: 40,
-  borderRadius: 24,
-  width: '100%',
-  maxWidth: 420,
-  boxShadow: '0 20px 60px rgba(0,0,0,0.25)',
-};
-
-
-const input = {
-  width: '100%',
-  padding: 10,
-  marginTop: 10,
-  borderRadius: 6,
-  border: '1px solid #ccc',
-};
-
-const button = {
-  width: '100%',
-  marginTop: 15,
-  padding: 10,
-  backgroundColor: '#2563eb',
-  color: 'white',
-  border: 'none',
-  borderRadius: 6,
-  cursor: 'pointer',
-};
