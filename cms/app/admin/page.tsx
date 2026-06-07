@@ -234,16 +234,20 @@ export default function AdminPage() {
           <p>Tidak ada laporan</p>
         ) : (
           filteredReports.map((r) => (
-            <div
-              key={r.id}
-              style={card}
-              onMouseEnter={(e) =>
-                (e.currentTarget.style.transform = 'scale(1.02)')
-              }
-              onMouseLeave={(e) =>
-                (e.currentTarget.style.transform = 'scale(1)')
-              }
-            >
+              <div
+                key={r.id}
+                style={card}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'scale(1.02)';
+                  e.currentTarget.style.boxShadow =
+                    '0 10px 30px rgba(37,99,235,0.3)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'scale(1)';
+                  e.currentTarget.style.boxShadow =
+                    '0 6px 18px rgba(0,0,0,0.08)';
+                }}
+              >
               <h3>{r.kategori}</h3>
               <p style={{ color: '#666', fontSize: 13 }}>{r.lokasi}</p>
 
