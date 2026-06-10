@@ -11,11 +11,16 @@ export default function AboutPage() {
         </p>
 
         <h2>Visi</h2>
-
         <p>
             Menjadi platform pengaduan masyarakat yang transparan dan terpercaya.
-</p>
-
+        </p>
+        
+        <h2>Misi</h2>
+        <ul>
+            <li>Memberikan layanan pengaduan yang mudah.</li>
+            <li>Meningkatkan partisipasi masyarakat.</li>
+            <li>Mendukung tata kelola yang transparan.</li>
+        </ul>
     </div>
   );
 }
