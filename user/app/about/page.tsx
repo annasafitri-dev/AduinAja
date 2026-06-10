@@ -1,6 +1,7 @@
 export default function AboutPage() {
   return (    
 
+    
         <div
         style={{
             minHeight: "100vh",
@@ -8,6 +9,16 @@ export default function AboutPage() {
             padding: "60px 20px",
         }}
         >
+            <div
+        style={{
+            maxWidth: "900px",
+            margin: "0 auto",
+            background: "rgba(255,255,255,0.12)",
+            backdropFilter: "blur(10px)",
+            borderRadius: "24px",
+            padding: "50px",
+        }}
+        ></div>
       <h1
         style={{
             color: "#1e3a8a",
