@@ -16,6 +16,8 @@ export default function AboutPage() {
             <li>Meningkatkan partisipasi masyarakat.</li>
             <li>Mendukung tata kelola yang transparan.</li>
         </ul>
+
+        <hr style={{ margin: "30px 0" }} />
     </div>
   );
 }
