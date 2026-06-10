@@ -1,7 +1,9 @@
 export default function AboutPage() {
   return (
     <div>
-      <h1>Tentang Kami</h1>
+      <h1 style={{ color: "#2563eb", marginTop: "30px" }}>
+        Tentang Kami
+        </h1>
 
         <p>
             <b>AduinAja!</b> merupakan platform pengaduan masyarakat berbasis digital.
@@ -26,6 +28,18 @@ export default function AboutPage() {
             <li>Kemudahan Akses</li>
         </ul>
 
+        
+        <h2 style={{ color: "#2563eb", marginTop: "30px" }}>
+            Keunggulan AduinAja!
+        </h2>
+
+        <ul>
+            <li>Pelaporan mudah dan cepat.</li>
+            <li>Dapat diakses kapan saja.</li>
+            <li>Data laporan tersimpan dengan aman.</li>
+            <li>Mendukung pelayanan publik yang lebih baik.</li>
+        </ul>
+
         <hr style={{ margin: "30px 0" }} />
 
         <p
@@ -37,16 +51,6 @@ export default function AboutPage() {
             © 2026 AduinAja! - Sistem Pengaduan Masyarakat
         </p>
 
-        <h2 style={{ color: "#2563eb", marginTop: "30px" }}>
-            Keunggulan AduinAja!
-        </h2>
-
-        <ul>
-            <li>Pelaporan mudah dan cepat.</li>
-            <li>Dapat diakses kapan saja.</li>
-            <li>Data laporan tersimpan dengan aman.</li>
-            <li>Mendukung pelayanan publik yang lebih baik.</li>
-        </ul>
     </div>
   );
 }
