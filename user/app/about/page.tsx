@@ -1,6 +1,17 @@
 export default function AboutPage() {
   return (
     <div>
+        <div
+        style={{
+            maxWidth: "900px",
+            margin: "50px auto",
+            padding: "40px",
+            background: "white",
+            borderRadius: "20px",
+            boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
+            lineHeight: "1.8",
+        }}
+        ></div>
       <h1
         style={{
             color: "#1e3a8a",
