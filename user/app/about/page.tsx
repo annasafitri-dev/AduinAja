@@ -1,8 +1,14 @@
 export default function AboutPage() {
   return (
     <div>
-      <h1 style={{ color: "#2563eb", marginTop: "30px" }}>
-        Tentang Kami
+      <h1
+        style={{
+            color: "#1e3a8a",
+            textAlign: "center",
+            marginBottom: "30px",
+            }}
+            >
+            Tentang Kami
         </h1>
 
         <p>
