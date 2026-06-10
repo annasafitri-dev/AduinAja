@@ -18,6 +18,30 @@ export default function AboutPage() {
             <li>Meningkatkan partisipasi masyarakat.</li>
             <li>Mendukung tata kelola yang transparan.</li>
         </ul>
+
+        <h2 style={{ color: "#2563eb", marginTop: "30px" }}>
+        Motto
+        </h2>
+
+        <div
+        style={{
+            background: "#eff6ff",
+            padding: "20px",
+            borderRadius: "12px",
+            marginTop: "15px",
+            textAlign: "center",
+        }}
+        >
+        <p
+            style={{
+                color: "#1e3a8a",
+                fontSize: "18px",
+                fontStyle: "italic",
+            }}
+            >
+            Suara Masyarakat, Solusi Bersama.
+        </p>
+
         <h2 style={{ color: "#2563eb", marginTop: "30px" }}>
         Nilai Kami</h2>
 
