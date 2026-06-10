@@ -40,6 +40,13 @@ export default function AboutPage() {
             <li>Mendukung pelayanan publik yang lebih baik.</li>
         </ul>
 
+        <h2 style={{ color: "#2563eb", marginTop: "30px" }}>
+        Hubungi Kami
+        </h2>
+
+            <p>Email : info@aduinaja.com</p>
+            <p>Telepon : +62 812-3456-7890</p>
+
         <hr style={{ margin: "30px 0" }} />
 
         <p
