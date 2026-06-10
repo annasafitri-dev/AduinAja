@@ -65,7 +65,13 @@ export default function AboutPage() {
             Misi
         </h2>
 
-        <ul style={{ color: "#475569" }}>
+        <ul
+        style={{
+            fontSize: "18px",
+            color: "#475569",
+            lineHeight: "2",
+        }}
+        >
             <li>Memberikan layanan pengaduan yang mudah.</li>
             <li>Meningkatkan partisipasi masyarakat.</li>
             <li>Mendukung tata kelola yang transparan.</li>
@@ -135,7 +141,13 @@ export default function AboutPage() {
         >
         Nilai Kami</h2>
 
-        <ul>
+        <ul
+        style={{
+            fontSize: "18px",
+            color: "#475569",
+            lineHeight: "2",
+        }}
+        >
             <li>Transparansi</li>
             <li>Kecepatan Pelayanan</li>
             <li>Keamanan Data</li>
@@ -154,7 +166,13 @@ export default function AboutPage() {
             Keunggulan AduinAja!
         </h2>
 
-        <ul>
+        <ul
+        style={{
+            fontSize: "18px",
+            color: "#475569",
+            lineHeight: "2",
+        }}
+        >
             <li>Pelaporan mudah dan cepat.</li>
             <li>Dapat diakses kapan saja.</li>
             <li>Data laporan tersimpan dengan aman.</li>
@@ -189,13 +207,7 @@ export default function AboutPage() {
         >
         <h2>Pelayanan Publik yang Lebih Baik</h2>
 
-        
-        <p
-        style={{
-            fontSize: "18px",
-            color: "#475569",
-        }}
-        >
+        <p>
             AduinAja hadir untuk membantu masyarakat menyampaikan aspirasi dan
             pengaduan secara cepat, aman, dan terpercaya.
         </p>
