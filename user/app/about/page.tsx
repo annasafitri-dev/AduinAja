@@ -36,6 +36,17 @@ export default function AboutPage() {
             >
             © 2026 AduinAja! - Sistem Pengaduan Masyarakat
         </p>
+
+        <h2 style={{ color: "#2563eb", marginTop: "30px" }}>
+            Keunggulan AduinAja!
+        </h2>
+
+        <ul>
+            <li>Pelaporan mudah dan cepat.</li>
+            <li>Dapat diakses kapan saja.</li>
+            <li>Data laporan tersimpan dengan aman.</li>
+            <li>Mendukung pelayanan publik yang lebih baik.</li>
+        </ul>
     </div>
   );
 }
