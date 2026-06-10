@@ -130,6 +130,23 @@ export default function AboutPage() {
 
         <hr style={{ margin: "30px 0" }} />
 
+        <div
+        style={{
+            marginTop: "40px",
+            padding: "30px",
+            background: "linear-gradient(to right, #1e3a8a, #2563eb)",
+            borderRadius: "20px",
+            color: "white",
+            textAlign: "center",
+        }}
+        >
+        <h2>Pelayanan Publik yang Lebih Baik</h2>
+
+        <p>
+            AduinAja hadir untuk membantu masyarakat menyampaikan aspirasi dan
+            pengaduan secara cepat, aman, dan terpercaya.
+        </p>
+        </div>
         <p
             style={{
                 textAlign: "center",
