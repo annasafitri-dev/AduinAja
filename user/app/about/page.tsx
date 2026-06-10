@@ -21,17 +21,14 @@ export default function AboutPage() {
         >
       <h1
         style={{
-            color: "#1e3a8a",
+            fontSize: "56px",
             textAlign: "center",
-            marginBottom: "30px",
-            fontSize: "36px",
-            fontWeight: "bold",
-            }}
-            >
-            Tentang Kami
-        </h1>
-
-        
+            color: "white",
+        }}
+        >
+        Tentang Kami
+    </h1>
+    
             <p
             style={{
                 fontSize: "18px",
