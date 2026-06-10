@@ -18,6 +18,15 @@ export default function AboutPage() {
         </ul>
 
         <hr style={{ margin: "30px 0" }} />
+
+        <p
+            style={{
+                textAlign: "center",
+                color: "#64748b",
+            }}
+            >
+            © 2026 AduinAja! - Sistem Pengaduan Masyarakat
+        </p>
     </div>
   );
 }
