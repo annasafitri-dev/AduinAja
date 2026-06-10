@@ -79,6 +79,19 @@ export default function Home() {
                 085156276986
               </a>
             </p>
+
+            <p>
+              📧
+                <a
+                  href="mailto:Aduinaja@gmail.com"
+                  style={{
+                    color: 'white',
+                    textDecoration: 'none',
+                  }}
+                >
+                  Aduinaja@gmail.com
+                </a>
+            </p>
           </h3>
         </div>
 
