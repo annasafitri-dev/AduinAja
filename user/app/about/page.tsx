@@ -26,10 +26,22 @@ export default function AboutPage() {
             Tentang Kami
         </h1>
 
-        <p>
+        
+            <p
+            style={{
+                fontSize: "18px",
+                color: "#475569",
+            }}
+            >
             <b>AduinAja!</b> merupakan platform pengaduan masyarakat berbasis digital.
-        </p>
-        <p>
+            </p>
+        
+            <p
+            style={{
+                fontSize: "18px",
+                color: "#475569",
+            }}
+            >
              Memudahkan masyarakat dalam menyampaikan laporan secara cepat dan aman.
         </p>
         
@@ -177,7 +189,13 @@ export default function AboutPage() {
         >
         <h2>Pelayanan Publik yang Lebih Baik</h2>
 
-        <p>
+        
+        <p
+        style={{
+            fontSize: "18px",
+            color: "#475569",
+        }}
+        >
             AduinAja hadir untuk membantu masyarakat menyampaikan aspirasi dan
             pengaduan secara cepat, aman, dan terpercaya.
         </p>
