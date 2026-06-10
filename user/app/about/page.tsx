@@ -4,13 +4,18 @@ export default function AboutPage() {
       <h1>Tentang Kami</h1>
 
         <p>
-        <b>AduinAja!</b> merupakan platform pengaduan masyarakat berbasis digital.
+            <b>AduinAja!</b> merupakan platform pengaduan masyarakat berbasis digital.
         </p>
         <p>
-        Memudahkan masyarakat dalam menyampaikan laporan secara cepat dan aman.
+             Memudahkan masyarakat dalam menyampaikan laporan secara cepat dan aman.
         </p>
-    </div>
 
-    
+        <h2>Visi</h2>
+
+        <p>
+            Menjadi platform pengaduan masyarakat yang transparan dan terpercaya.
+</p>
+
+    </div>
   );
 }
