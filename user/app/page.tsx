@@ -59,20 +59,27 @@ export default function Home() {
 
         <div>
           <h3>
-            <a
-              href="/contact"
-              style={{ color: 'white', textDecoration: 'none' }}
-            >
-              Kontak
-            </a>
+            <p>
+              📞
+              <a
+                href="https://wa.me/6285156276986"
+                target="_blank"
+                style={{
+                  color: 'white',
+                  textDecoration: 'none',
+                }}
+              >
+                085156276986
+              </a>
+            </p>
           </h3>
         </div>
 
         <div>
           <h3>Ikuti Kami</h3>
-          <p>📺 KemkomdigiTV</p>
-          <p>📱 Kemkomdigi</p>
-          <p>📷 @kemkomdigi</p>
+          <p>📺 AduinAja</p>
+          <p>📱 AduinAja</p>
+          <p>📷 @AduinAja</p>
         </div>
       </footer>
           </div>
