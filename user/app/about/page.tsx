@@ -70,7 +70,14 @@ export default function AboutPage() {
             boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
         }}
         >
-        <h2 style={{ color: "#2563eb" }}>
+        <h2
+        style={{
+            color: "#2563eb",
+            fontSize: "28px",
+            fontWeight: "bold",
+            marginBottom: "15px",
+        }}
+        >
             Motto
         </h2>
 
@@ -117,7 +124,14 @@ export default function AboutPage() {
         </ul>
 
         
-        <h2 style={{ color: "#2563eb", marginTop: "30px" }}>
+        <h2
+        style={{
+            color: "#2563eb",
+            fontSize: "28px",
+            fontWeight: "bold",
+            marginBottom: "15px",
+        }}
+        >
             Keunggulan AduinAja!
         </h2>
 
