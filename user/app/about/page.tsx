@@ -18,7 +18,7 @@ export default function AboutPage() {
             borderRadius: "24px",
             padding: "50px",
         }}
-        ></div>
+        >
       <h1
         style={{
             color: "#1e3a8a",
@@ -225,7 +225,7 @@ export default function AboutPage() {
             >
             © 2026 AduinAja! - Sistem Pengaduan Masyarakat
         </p>
-
+    </div>
     </div>
   );
 }
