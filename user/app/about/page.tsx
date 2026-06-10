@@ -16,6 +16,15 @@ export default function AboutPage() {
             <li>Meningkatkan partisipasi masyarakat.</li>
             <li>Mendukung tata kelola yang transparan.</li>
         </ul>
+        <h2 style={{ color: "#2563eb", marginTop: "30px" }}>
+        Nilai Kami</h2>
+
+        <ul>
+            <li>Transparansi</li>
+            <li>Kecepatan Pelayanan</li>
+            <li>Keamanan Data</li>
+            <li>Kemudahan Akses</li>
+        </ul>
 
         <hr style={{ margin: "30px 0" }} />
 
