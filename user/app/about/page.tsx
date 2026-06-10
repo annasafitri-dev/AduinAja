@@ -41,6 +41,26 @@ export default function AboutPage() {
             >
             Suara Masyarakat, Solusi Bersama.
         </p>
+        </div>
+
+        <div
+            style={{
+                background: "#eff6ff",
+                padding: "20px",
+                borderRadius: "12px",
+                marginTop: "20px",
+            }}
+            >
+            <p
+                style={{
+                fontStyle: "italic",
+                color: "#1e3a8a",
+                }}
+            >
+                Bersama masyarakat, kami menghadirkan layanan pengaduan yang transparan,
+                cepat, dan terpercaya.
+            </p>
+        </div>
 
         <h2 style={{ color: "#2563eb", marginTop: "30px" }}>
         Nilai Kami</h2>
