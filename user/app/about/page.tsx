@@ -149,7 +149,14 @@ export default function AboutPage() {
             <li>Mendukung pelayanan publik yang lebih baik.</li>
         </ul>
 
-        <h2 style={{ color: "#2563eb", marginTop: "30px" }}>
+        <h2
+        style={{
+            color: "#2563eb",
+            fontSize: "28px",
+            fontWeight: "bold",
+            marginBottom: "15px",
+        }}
+        >
         Hubungi Kami
         </h2>
 
