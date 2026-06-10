@@ -1,7 +1,6 @@
 export default function AboutPage() {
   return (
-    <div>
-        <div
+    <div
         style={{
             maxWidth: "900px",
             margin: "50px auto",
@@ -11,7 +10,7 @@ export default function AboutPage() {
             boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
             lineHeight: "1.8",
         }}
-        ></div>
+        >
       <h1
         style={{
             color: "#1e3a8a",
@@ -29,34 +28,55 @@ export default function AboutPage() {
              Memudahkan masyarakat dalam menyampaikan laporan secara cepat dan aman.
         </p>
         
-        <h2>Misi</h2>
-        <ul>
+        <div
+        style={{
+            background: "#f8fafc",
+            padding: "20px",
+            borderRadius: "15px",
+            marginTop: "20px",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+        }}
+        >
+        <h2
+            style={{
+            color: "#2563eb",
+            marginBottom: "15px",
+            }}
+        >
+            Misi
+        </h2>
+
+        <ul style={{ color: "#475569" }}>
             <li>Memberikan layanan pengaduan yang mudah.</li>
             <li>Meningkatkan partisipasi masyarakat.</li>
             <li>Mendukung tata kelola yang transparan.</li>
         </ul>
-
-        <h2 style={{ color: "#2563eb", marginTop: "30px" }}>
-        Motto
-        </h2>
+        </div>
 
         <div
         style={{
             background: "#eff6ff",
             padding: "20px",
-            borderRadius: "12px",
-            marginTop: "15px",
-            textAlign: "center",
+            borderRadius: "15px",
+            marginTop: "20px",
+            borderLeft: "5px solid #2563eb",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
         }}
         >
+        <h2 style={{ color: "#2563eb" }}>
+            Motto
+        </h2>
+
         <p
             style={{
-                color: "#1e3a8a",
-                fontSize: "18px",
-                fontStyle: "italic",
+            color: "#1e3a8a",
+            fontStyle: "italic",
+            textAlign: "center",
+            fontSize: "18px",
+            margin: 0,
             }}
-            >
-            Suara Masyarakat, Solusi Bersama.
+        >
+            "Suara Masyarakat, Solusi Bersama."
         </p>
         </div>
 
