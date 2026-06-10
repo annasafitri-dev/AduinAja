@@ -59,7 +59,14 @@ export default function Home() {
 
         <div>
           <h3>
+            <a
+              href="/about"
+              style={{ color: 'white', textDecoration: 'none' }}
+              >
+                Contact Us
+              </a>
             <p>
+            
               📞
               <a
                 href="https://wa.me/6285156276986"
