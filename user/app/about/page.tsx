@@ -19,6 +19,17 @@ export default function AboutPage() {
             padding: "50px",
         }}
         >
+        <div
+        style={{
+            display: "inline-block",
+            background: "rgba(255,255,255,0.2)",
+            padding: "8px 18px",
+            borderRadius: "20px",
+            marginBottom: "20px",
+        }}
+        >
+        Platform Pengaduan Digital
+        </div>
       <h1
         style={{
             fontSize: "56px",
@@ -28,7 +39,7 @@ export default function AboutPage() {
         >
         Tentang Kami
     </h1>
-    
+
             <p
             style={{
                 fontSize: "18px",
