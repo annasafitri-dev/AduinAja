@@ -9,6 +9,9 @@ export default function AboutPage() {
             borderRadius: "20px",
             boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
             lineHeight: "1.8",
+            fontSize: "18px",
+            color: "#475569",
+            fontFamily: "Arial, sans-serif",
         }}
         >
       <h1
@@ -16,6 +19,8 @@ export default function AboutPage() {
             color: "#1e3a8a",
             textAlign: "center",
             marginBottom: "30px",
+            fontSize: "36px",
+            fontWeight: "bold",
             }}
             >
             Tentang Kami
