@@ -45,6 +45,8 @@ export default function AboutPage() {
         <h2
             style={{
             color: "#2563eb",
+            fontSize: "28px",
+            fontWeight: "bold",
             marginBottom: "15px",
             }}
         >
