@@ -19,7 +19,6 @@ export default function AboutPage() {
         <ul>
             <li>Memberikan layanan pengaduan yang mudah.</li>
             <li>Meningkatkan partisipasi masyarakat.</li>
-            <li>Mendukung tata kelola yang transparan.</li>
         </ul>
     </div>
   );
