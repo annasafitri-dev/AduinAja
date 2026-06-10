@@ -1,17 +1,11 @@
 export default function AboutPage() {
-  return (
-    <div
+  return (    
+
+        <div
         style={{
-            maxWidth: "900px",
-            margin: "50px auto",
-            padding: "40px",
-            background: "white",
-            borderRadius: "20px",
-            boxShadow: "0 8px 20px rgba(0,0,0,0.1)",
-            lineHeight: "1.8",
-            fontSize: "18px",
-            color: "#475569",
-            fontFamily: "Arial, sans-serif",
+            minHeight: "100vh",
+            background: "linear-gradient(135deg, #0f172a, #2563eb)",
+            padding: "60px 20px",
         }}
         >
       <h1
