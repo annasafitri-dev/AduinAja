@@ -124,6 +124,25 @@ export default function AdminPage() {
             A
           </div>
 
+          {/* Informasi Admin */}
+          <div>
+            <h2 style={{ margin: 0 }}>
+              Anna Safitri
+            </h2>
+
+            <p
+              style={{
+                margin: "5px 0",
+                background: "#16a34a",
+                padding: "4px 10px",
+                borderRadius: "10px",
+                display: "inline-block",
+                fontSize: "14px",
+              }}
+            >
+              Administrator
+            </p>
+
         <p
           style={{
             margin: 0,
