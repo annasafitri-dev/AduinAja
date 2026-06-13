@@ -52,3 +52,7 @@ export default function ProfilPage() {
           <p>
             <b>Email :</b> annasafitri@gmail.com
           </p>
+
+          <p>
+            <b>Nomor Telepon :</b> 081234567890
+          </p>
