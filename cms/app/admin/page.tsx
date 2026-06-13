@@ -352,7 +352,7 @@ export default function AdminPage() {
               </a>
 
               <a
-                href={`http://127.0.0.1:3000/uploads/${selectedReport.bukti}`}
+                href={`http://127.0.0.1:3000/uploads/${r.bukti}`}
                 download
               >
                 <button
