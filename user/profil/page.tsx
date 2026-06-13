@@ -44,3 +44,7 @@ export default function ProfilPage() {
           >
             Informasi Profil
           </h2>
+
+          <p>
+            <b>Nama Pengguna :</b> Anna Safitri
+          </p>
