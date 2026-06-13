@@ -327,11 +327,10 @@ export default function AdminPage() {
               <p><b>Laporan:</b> {r.laporan}</p>
 
               {r.bukti && (
-                <img
-                  src={`http://127.0.0.1:3000/uploads/${r.bukti}`}
-                  style={image}
-                />
-              )}
+                  <img
+                    src={`http://127.0.0.1:3000/uploads/${r.bukti}`}
+                    style={image}
+                  />
 
 
               <p>
