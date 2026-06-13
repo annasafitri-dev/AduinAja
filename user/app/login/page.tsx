@@ -62,3 +62,16 @@ export default function LoginPage() {
           }}
         />
 
+        <input
+          type="password"
+          placeholder="Password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          style={{
+            width: "100%",
+            padding: "12px",
+            marginTop: "15px",
+          }}
+        />
+
+
