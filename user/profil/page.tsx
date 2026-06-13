@@ -48,3 +48,7 @@ export default function ProfilPage() {
           <p>
             <b>Nama Pengguna :</b> Anna Safitri
           </p>
+
+          <p>
+            <b>Email :</b> annasafitri@gmail.com
+          </p>
