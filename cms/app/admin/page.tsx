@@ -311,15 +311,23 @@ const chartData = {
           }}
         >
           <h2
-    style={{
-      textAlign: "center",
-      color: "#1e3a8a",
-    }}
-  >
-    Statistik Status Laporan
-  </h2>
-
-</div>
+            style={{
+              textAlign: "center",
+              color: "#1e3a8a",
+            }}
+          >
+            Statistik Status Laporan
+          </h2>
+          <div
+            style={{
+              width: 350,
+              margin: "0 auto",
+            }}
+          >
+            <Pie data={chartData} />
+          </div>
+        </div>
+        </div>
         
 
         {/* SEARCH */}
