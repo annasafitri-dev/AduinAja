@@ -123,8 +123,7 @@ export default function AboutPage() {
             fontWeight: "bold",
             }}
         >
-        <p>
-            "Suara Masyarakat, Solusi Bersama."
+            &quot;Suara Masyarakat, Solusi Bersama.&quot;
         </p>
         </div>
 
