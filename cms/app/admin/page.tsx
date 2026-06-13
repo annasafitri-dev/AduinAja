@@ -147,6 +147,11 @@ export default function AdminPage() {
               {new Date().toLocaleDateString("id-ID")}
             </p>
 
+            <p style={{ margin: 0 }}>
+                {new Date().toLocaleTimeString("id-ID")}
+              </p>
+            </div>
+          </div>
         <p
           style={{
             margin: 0,
