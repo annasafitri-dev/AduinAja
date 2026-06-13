@@ -132,6 +132,21 @@ export default function AdminPage() {
   XLSX.writeFile(workbook, "laporan_aduinaja.xlsx");
 };
 
+const chartData = {
+  labels: ["Pending", "Proses", "Selesai"],
+  datasets: [
+    {
+      data: [pending, proses, selesai],
+      backgroundColor: [
+        "#f59e0b",
+        "#2563eb",
+        "#16a34a",
+      ],
+      borderWidth: 1,
+    },
+  ],
+};
+
   return(
     <div style={page}>
     <div style={navbar}>
