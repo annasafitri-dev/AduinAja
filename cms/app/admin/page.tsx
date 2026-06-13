@@ -339,7 +339,17 @@ export default function AdminPage() {
                     rel="noopener noreferrer"
                   >
                     
-                    
+                    <button
+                      style={{
+                        marginTop: 10,
+                        padding: "8px 14px",
+                        backgroundColor: "#0ea5e9",
+                        color: "white",
+                        border: "none",
+                        borderRadius: 8,
+                        cursor: "pointer",
+                      }}
+                    >
 
 
               <p>
