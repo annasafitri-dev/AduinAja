@@ -82,11 +82,12 @@ export default function FAQPage() {
           </p>
         </div>
 
-        div
+        <div
           style={{
             background: "#f8fafc",
             padding: "20px",
             borderRadius: "15px",
+            marginBottom: "20px",
           }}
         >
           <h2 style={{ color: "#2563eb" }}>
