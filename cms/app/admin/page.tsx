@@ -121,7 +121,16 @@ export default function AdminPage() {
               fontWeight: "bold",
             }}
           >
-            A
+            <img
+              src="/profil.jpg"
+              alt="Profil Admin"
+              style={{
+                width: "60px",
+                height: "60px",
+                borderRadius: "50%",
+                objectFit: "cover",
+              }}
+            />
           </div>
 
           {/* Informasi Admin */}
