@@ -161,16 +161,6 @@ export default function AdminPage() {
               </p>
             </div>
           </div>
-        <p
-          style={{
-            margin: 0,
-            fontSize: 14,
-            color: '#ddd',
-          }}
-        >
-           {new Date().toLocaleTimeString('id-ID')}
-        </p>
-        </div>
 
         <div style={{ display: 'flex', gap: 10 }}>
           <button
@@ -215,6 +205,7 @@ export default function AdminPage() {
       >
         Dashboard Laporan
       </h1>
+      
 
       <p
         style={{
@@ -428,34 +419,32 @@ export default function AdminPage() {
         </div>
       )}
       {/* Footer */}
-    <footer
-          style={{
-            textAlign: 'center',
-            marginTop: 30,
-            color: 'white',
-            padding: 20,
-          }}
-        >
-          © 2026 AduinAja! - Sistem Pengaduan Masyarakat
-        </footer>
-
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          style={{
-            position: 'fixed',
-            bottom: 20,
-            right: 20,
-            padding: '10px 15px',
-            borderRadius: 10,
-            border: 'none',
-            backgroundColor: '#2563eb',
-            color: 'white',
-            cursor: 'pointer',
-          }}
-        >
-          ⬆️
-        </button>
-      </div>  
+      <><footer
+    style={{
+      textAlign: 'center',
+      marginTop: 30,
+      color: 'white',
+      padding: 20,
+    }}
+  >
+    © 2026 AduinAja! - Sistem Pengaduan Masyarakat
+  </footer><button
+    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+    style={{
+      position: 'fixed',
+      bottom: 20,
+      right: 20,
+      padding: '10px 15px',
+      borderRadius: 10,
+      border: 'none',
+      backgroundColor: '#2563eb',
+      color: 'white',
+      cursor: 'pointer',
+    }}
+  >
+      ⬆️
+    </button></>
+    </div>
   );
 };
 
