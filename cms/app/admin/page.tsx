@@ -404,7 +404,7 @@ export default function AdminPage() {
                   cursor: "pointer",
                 }}
               >
-                
+                📊 Export Excel
               </button>
             </>
           )}
