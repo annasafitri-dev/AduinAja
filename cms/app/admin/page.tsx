@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import * as XLSX from "xlsx";
 
 export default function AdminPage() {
   const [reports, setReports] = useState<any[]>([]);
