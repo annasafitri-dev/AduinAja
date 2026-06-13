@@ -350,6 +350,11 @@ export default function AdminPage() {
                         cursor: "pointer",
                       }}
                     >
+                      Download Bukti
+                    </button>
+                  </a>
+                </>
+              )}
 
 
               <p>
