@@ -143,6 +143,10 @@ export default function AdminPage() {
               Administrator
             </p>
 
+            <p style={{ margin: "5px 0" }}>
+              {new Date().toLocaleDateString("id-ID")}
+            </p>
+
         <p
           style={{
             margin: 0,
