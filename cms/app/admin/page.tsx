@@ -310,6 +310,14 @@ const chartData = {
             boxShadow: "0 6px 18px rgba(0,0,0,0.1)",
           }}
         >
+          <h2
+    style={{
+      textAlign: "center",
+      color: "#1e3a8a",
+    }}
+  >
+    Statistik Status Laporan
+  </h2>
 
 </div>
         
