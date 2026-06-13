@@ -123,6 +123,7 @@ export default function AboutPage() {
             fontWeight: "bold",
             }}
         >
+        <p>
             "Suara Masyarakat, Solusi Bersama."
         </p>
         </div>
@@ -180,7 +181,7 @@ export default function AboutPage() {
             <li>Kemudahan Akses</li>
         </ul>
         </div>
-        
+
         <h2
         style={{
             color: "#2563eb",
