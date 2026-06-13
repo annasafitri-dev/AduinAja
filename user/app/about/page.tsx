@@ -147,6 +147,15 @@ export default function AboutPage() {
             </p>
         </div>
 
+        <div
+        style={{
+            background: "#f8fafc",
+            padding: "20px",
+            borderRadius: "15px",
+            marginTop: "20px",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+        }}
+        >
         <h2
         style={{
             color: "#2563eb",
@@ -155,12 +164,13 @@ export default function AboutPage() {
             marginBottom: "15px",
         }}
         >
-        Nilai Kami</h2>
+        Nilai Kami
+        </h2>
 
         <ul
         style={{
             fontSize: "18px",
-            color: "#ffffff",
+            color: "#1e3a8a",
             lineHeight: "2",
         }}
         >
@@ -169,7 +179,7 @@ export default function AboutPage() {
             <li>Keamanan Data</li>
             <li>Kemudahan Akses</li>
         </ul>
-
+        </div>
         
         <h2
         style={{
