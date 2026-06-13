@@ -373,25 +373,6 @@ export default function AdminPage() {
                 </button>
               </a>
 
-              <a
-                href={`http://127.0.0.1:3000/uploads/${r.bukti}`}
-                download
-              >
-                <button
-                  style={{
-                    marginTop: 10,
-                    padding: "10px 16px",
-                    backgroundColor: "#0ea5e9",
-                    color: "white",
-                    border: "none",
-                    borderRadius: 8,
-                    cursor: "pointer",
-                  }}
-                >
-                 📥 Download Bukti 
-                </button>
-              </a>
-
               <button
                 onClick={exportExcel}
                 style={{
