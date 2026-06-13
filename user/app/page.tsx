@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 
+
 export default function Home() {
   return (
     <div style={container}>
@@ -35,7 +36,24 @@ export default function Home() {
         </div>
       </div>
 
-      <footer
+      <Link href="/riwayat">
+        <button
+          style={{
+            background: "#2563eb",
+            color: "white",
+            padding: "12px 25px",
+            border: "none",
+            borderRadius: "10px",
+            cursor: "pointer",
+            fontWeight: "bold",
+            marginTop: "20px",
+          }}
+        >
+          Riwayat Laporan
+        </button>
+      </Link>
+
+            <footer
         style={{
           display: 'flex',
           justifyContent: 'space-around',

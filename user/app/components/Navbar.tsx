@@ -11,6 +11,7 @@ export default function Navbar() {
         <Link href="/" style={link}>Home</Link>
         <Link href="/lapor" style={link}>Lapor</Link>
         <Link href="http://localhost:3001/login" style={link}>Login</Link>
+        
       </div>
     </div>
   );
