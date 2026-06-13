@@ -327,35 +327,41 @@ export default function AdminPage() {
               <p><b>Laporan:</b> {r.laporan}</p>
 
               {r.bukti && (
-                  <img
-                    src={`http://127.0.0.1:3000/uploads/${r.bukti}`}
-                    style={image}
-                  />
+                <>
+                <img
+                  src={`http://127.0.0.1:3000/uploads/${r.bukti}`}
+                  style={image}
+                />
 
-                  <a
-                    href={`http://127.0.0.1:3000/uploads/${r.bukti}`}
-                    download
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    
-                    <button
-                      style={{
-                        marginTop: 10,
-                        padding: "8px 14px",
-                        backgroundColor: "#0ea5e9",
-                        color: "white",
-                        border: "none",
-                        borderRadius: 8,
-                        cursor: "pointer",
-                      }}
-                    >
-                      Download Bukti
-                    </button>
-                  </a>
-                </>
-              )}
+                <a
+                  href={`http://127.0.0.1:3000/uploads/${r.bukti}`}
+                  download
+                  target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button
+                  style={{
+                    marginTop: 10,
+                    padding: "8px 14px",
+                    backgroundColor: "#0ea5e9",
+                    color: "white",
+                    border: "none",
+                    borderRadius: 8,
+                    cursor: "pointer",
+                  }}
+                >
+                  Download Bukti
+                </button>
+              </a>
 
+              <a
+                href={`http://127.0.0.1:3000/uploads/${selectedReport.bukti}`}
+                download
+              >
+                
+              </a>
+            </>
+          )}
 
               <p>
                 <b>Status:</b>{' '}
