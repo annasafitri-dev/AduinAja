@@ -1,3 +1,16 @@
+"use client";
+
+import { useState } from "react";
+
+export default function ProfilPage() {
+  const [nama, setNama] = useState("Anna Safitri");
+  const [email, setEmail] = useState("annasafitri@gmail.com");
+  const [telepon, setTelepon] = useState("081234567890");
+
+  const handleSimpan = () => {
+    alert("Profil berhasil diperbarui!");
+  };
+  
 export default function ProfilPage() {
   return (
     <div

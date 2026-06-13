@@ -84,7 +84,7 @@ useEffect(() => {
         <Link href="/faq">
         <button
           style={{
-            background: "#2563eb",
+            background: "#1e3a8a",
             color: "white",
             padding: "12px 25px",
             border: "none",
