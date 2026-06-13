@@ -36,6 +36,24 @@ export default function Home() {
         </div>
       </div>
 
+      <Link href="/profil">
+        <button
+          style={{
+            background: "#2563eb",
+            color: "white",
+            padding: "12px 25px",
+            border: "none",
+            borderRadius: "10px",
+            cursor: "pointer",
+            fontWeight: "bold",
+            marginTop: "20px",
+            marginLeft: "15px",
+          }}
+        >
+          Profil Saya
+        </button>
+      </Link>
+
       <Link href="/riwayat">
         <button
           style={{
