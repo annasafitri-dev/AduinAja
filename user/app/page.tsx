@@ -1,9 +1,20 @@
 'use client';
 
+import { useRouter } from 'next/dist/client/components/navigation';
 import Link from 'next/link';
+import { useEffect } from 'react';
 
 
 export default function Home() {
+  const router = useRouter();
+
+useEffect(() => {
+  const isLogin = localStorage.getItem("isLogin");
+
+  if (!isLogin) {
+    router.push("/login");
+  }
+}, []);
   return (
     <div style={container}>
       <div style={content}>
