@@ -2,6 +2,13 @@
 import { useEffect, useState } from 'react';
 import * as XLSX from "xlsx";
 
+import {
+  Chart as ChartJS,
+  ArcElement,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
 export default function AdminPage() {
   const [reports, setReports] = useState<any[]>([]);
   const [search, setSearch] = useState('');
