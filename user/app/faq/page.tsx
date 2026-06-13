@@ -27,3 +27,15 @@ export default function FAQPage() {
         >
           FAQ
         </h1>
+
+        <div
+          style={{
+            background: "#f8fafc",
+            padding: "20px",
+            borderRadius: "15px",
+            marginBottom: "20px",
+          }}
+        >
+          <h2 style={{ color: "#2563eb" }}>
+            Bagaimana cara membuat laporan?
+          </h2>
