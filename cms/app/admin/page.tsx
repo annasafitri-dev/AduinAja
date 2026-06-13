@@ -95,7 +95,16 @@ export default function AdminPage() {
 
   return cocokSearch && cocokStatus && cocokKategori;
 });
-
+  const exportExcel = () => {
+  const data = filteredReports.map((r, index) => ({
+    No: index + 1,
+    Nama: r.nama,
+    Kategori: r.kategori,
+    Lokasi: r.lokasi,
+    Laporan: r.laporan,
+    Status: r.status,
+  }));
+  
   return(
     <div style={page}>
     <div style={navbar}>
