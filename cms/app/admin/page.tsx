@@ -300,6 +300,18 @@ const chartData = {
           border: '1px solid #e5e7eb',
         }}
       />
+      {/* GRAFIK */}
+        <div
+          style={{
+            background: "white",
+            padding: 25,
+            borderRadius: 20,
+            marginTop: 20,
+            boxShadow: "0 6px 18px rgba(0,0,0,0.1)",
+          }}
+        >
+
+</div>
         
 
         {/* SEARCH */}
@@ -531,6 +543,8 @@ const chartData = {
       ⬆️
     </button></>
     </div>
+
+    
   );
 };
 
