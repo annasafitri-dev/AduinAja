@@ -27,6 +27,21 @@ export default function RiwayatPage() {
         >
           Riwayat Laporan
         </h1>
-        
+
+        <div
+          style={{
+            background: "#f8fafc",
+            padding: "20px",
+            borderRadius: "15px",
+            marginBottom: "20px",
+          }}
+        >
+          <h2 style={{ color: "#2563eb" }}>
+            Laporan Jalan Rusak
+          </h2>
+
+          <p>Status: Diproses</p>
+          <p>Tanggal: 13 Juni 2026</p>
+        </div>
   );
 }
