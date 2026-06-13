@@ -35,6 +35,7 @@ export default function AboutPage() {
             fontSize: "56px",
             textAlign: "center",
             color: "white",
+            fontWeight: "bold",
         }}
         >
         Tentang Kami
@@ -43,7 +44,7 @@ export default function AboutPage() {
             <p
             style={{
                 fontSize: "18px",
-                color: "#475569",
+                color: "#ffffff",
             }}
             >
             <b>AduinAja!</b> merupakan platform pengaduan masyarakat berbasis digital.
@@ -52,7 +53,7 @@ export default function AboutPage() {
             <p
             style={{
                 fontSize: "18px",
-                color: "#475569",
+                color: "#ffffff",
             }}
             >
              Memudahkan masyarakat dalam menyampaikan laporan secara cepat dan aman.
@@ -81,7 +82,7 @@ export default function AboutPage() {
         <ul
         style={{
             fontSize: "18px",
-            color: "#475569",
+            color: "#1e3a8a",
             lineHeight: "2",
         }}
         >
@@ -119,6 +120,7 @@ export default function AboutPage() {
             textAlign: "center",
             fontSize: "18px",
             margin: 0,
+            fontWeight: "bold",
             }}
         >
             "Suara Masyarakat, Solusi Bersama."
@@ -137,6 +139,7 @@ export default function AboutPage() {
                 style={{
                 fontStyle: "italic",
                 color: "#1e3a8a",
+                fontWeight: "bold",
                 }}
             >
                 Bersama masyarakat, kami menghadirkan layanan pengaduan yang transparan,
@@ -157,7 +160,7 @@ export default function AboutPage() {
         <ul
         style={{
             fontSize: "18px",
-            color: "#475569",
+            color: "#ffffff",
             lineHeight: "2",
         }}
         >
@@ -182,7 +185,7 @@ export default function AboutPage() {
         <ul
         style={{
             fontSize: "18px",
-            color: "#475569",
+            color: "#ffffff",
             lineHeight: "2",
         }}
         >
@@ -203,8 +206,22 @@ export default function AboutPage() {
         Hubungi Kami
         </h2>
 
-            <p>Email : info@aduinaja.com</p>
-            <p>Telepon : +62 812-3456-7890</p>
+            <p
+            style={{
+                fontSize: "18px",
+                color: "#ffffff",
+            }}
+            >
+
+                Email : info@aduinaja.com</p>
+            <p
+                style={{
+                    fontSize: "18px",
+                    color: "#ffffff",
+                }}
+            >
+                Telepon : +62 812-3456-7890
+            </p>
 
         <hr style={{ margin: "30px 0" }} />
 
@@ -228,7 +245,7 @@ export default function AboutPage() {
         <p
             style={{
                 textAlign: "center",
-                color: "#64748b",
+                color: "#ffffff",
             }}
             >
             © 2026 AduinAja! - Sistem Pengaduan Masyarakat
