@@ -81,3 +81,24 @@ export default function FAQPage() {
             Edit Profil untuk memperbarui informasi akun.
           </p>
         </div>
+
+        div
+          style={{
+            background: "#f8fafc",
+            padding: "20px",
+            borderRadius: "15px",
+          }}
+        >
+          <h2 style={{ color: "#2563eb" }}>
+            Bagaimana cara menghubungi admin?
+          </h2>
+
+          <p>
+            Pengguna dapat menghubungi admin melalui email
+            info@aduinaja.com atau nomor telepon +62 812-3456-7890.
+          </p>
+        </div>
+      </div>
+    </div>  
+  );
+}
