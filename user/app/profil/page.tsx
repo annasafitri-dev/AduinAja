@@ -97,8 +97,8 @@ export default function ProfilPage() {
                   }}
                 />
 
-                <button
-                  onClick={handleSimpan}
+              <button
+                onClick={handleSimpan}
                   style={{
                     marginTop: "20px",
                     background: "#2563eb",
@@ -110,6 +110,8 @@ export default function ProfilPage() {
                     fontWeight: "bold",
                   }}
                 >
+                   Simpan Perubahan
+              </button>
         </div>
       </div>
     </div>
