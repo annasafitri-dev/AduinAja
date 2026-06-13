@@ -7,5 +7,23 @@ export default function FAQPage() {
         padding: "60px 20px",
       }}
     >
-        
-    </div>
+        <div
+        style={{
+          maxWidth: "900px",
+          margin: "0 auto",
+          background: "rgba(255,255,255,0.12)",
+          backdropFilter: "blur(10px)",
+          borderRadius: "24px",
+          padding: "50px",
+        }}
+      >
+        <h1
+          style={{
+            color: "white",
+            textAlign: "center",
+            fontSize: "48px",
+            marginBottom: "40px",
+          }}
+        >
+          FAQ
+        </h1>
