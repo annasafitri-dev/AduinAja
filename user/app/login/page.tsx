@@ -22,3 +22,32 @@ export default function LoginPage() {
       alert("Email atau password salah!");
     }
   };
+
+  return (
+    <div
+      style={{
+        minHeight: "100vh",
+        background: "linear-gradient(135deg,#0f172a,#2563eb)",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+        <div
+        style={{
+          background: "white",
+          padding: "40px",
+          borderRadius: "20px",
+          width: "350px",
+        }}
+      >
+        <h1
+          style={{
+            textAlign: "center",
+            color: "#2563eb",
+          }}
+        >
+          Login AduinAja!
+        </h1>
+
+        
