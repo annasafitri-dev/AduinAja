@@ -39,3 +39,9 @@ export default function FAQPage() {
           <h2 style={{ color: "#2563eb" }}>
             Bagaimana cara membuat laporan?
           </h2>
+
+          <p>
+            Pengguna dapat membuat laporan melalui halaman laporan dengan
+            mengisi data yang diperlukan dan mengunggah bukti berupa gambar.
+          </p>
+        </div>
