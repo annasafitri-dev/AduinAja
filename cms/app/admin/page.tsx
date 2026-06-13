@@ -391,6 +391,21 @@ export default function AdminPage() {
                  📥 Download Bukti 
                 </button>
               </a>
+
+              <button
+                onClick={exportExcel}
+                style={{
+                  marginLeft: 10,
+                  padding: "10px 15px",
+                  backgroundColor: "#16a34a",
+                  color: "white",
+                  border: "none",
+                  borderRadius: 8,
+                  cursor: "pointer",
+                }}
+              >
+                
+              </button>
             </>
           )}
 
