@@ -47,6 +47,23 @@ useEffect(() => {
         </div>
       </div>
 
+      <Link href="/faq">
+        <button
+          style={{
+            background: "#2563eb",
+            color: "white",
+            padding: "12px 25px",
+            border: "none",
+            borderRadius: "10px",
+            cursor: "pointer",
+            fontWeight: "bold",
+            marginLeft: "15px",
+          }}
+        >
+          FAQ
+        </button>
+      </Link>
+
       <div style={{ marginTop: "30px" }}>
         <Link href="/riwayat">
           <button
