@@ -358,7 +358,19 @@ export default function AdminPage() {
                 href={`http://127.0.0.1:3000/uploads/${selectedReport.bukti}`}
                 download
               >
-                
+                <button
+                  style={{
+                    marginTop: 10,
+                    padding: "10px 16px",
+                    backgroundColor: "#0ea5e9",
+                    color: "white",
+                    border: "none",
+                    borderRadius: 8,
+                    cursor: "pointer",
+                  }}
+                >
+                  
+  </button>
               </a>
             </>
           )}
