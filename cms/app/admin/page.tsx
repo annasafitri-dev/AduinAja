@@ -332,6 +332,15 @@ export default function AdminPage() {
                     style={image}
                   />
 
+                  <a
+                    href={`http://127.0.0.1:3000/uploads/${r.bukti}`}
+                    download
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    
+                    
+
 
               <p>
                 <b>Status:</b>{' '}
