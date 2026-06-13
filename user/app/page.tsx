@@ -36,40 +36,40 @@ export default function Home() {
         </div>
       </div>
 
-      <Link href="/profil">
-        <button
-          style={{
-            background: "#2563eb",
-            color: "white",
-            padding: "12px 25px",
-            border: "none",
-            borderRadius: "10px",
-            cursor: "pointer",
-            fontWeight: "bold",
-            marginTop: "20px",
-            marginLeft: "15px",
-          }}
-        >
-          Profil Saya
-        </button>
-      </Link>
+      <div style={{ marginTop: "30px" }}>
+        <Link href="/riwayat">
+          <button
+            style={{
+              background: "#2563eb",
+              color: "white",
+              padding: "12px 25px",
+              border: "none",
+              borderRadius: "10px",
+              cursor: "pointer",
+              fontWeight: "bold",
+              marginRight: "15px",
+            }}
+          >
+            Riwayat Laporan
+          </button>
+        </Link>
 
-      <Link href="/riwayat">
-        <button
-          style={{
-            background: "#2563eb",
-            color: "white",
-            padding: "12px 25px",
-            border: "none",
-            borderRadius: "10px",
-            cursor: "pointer",
-            fontWeight: "bold",
-            marginTop: "20px",
-          }}
-        >
-          Riwayat Laporan
-        </button>
-      </Link>
+        <Link href="/profil">
+          <button
+            style={{
+              background: "#1e3a8a",
+              color: "white",
+              padding: "12px 25px",
+              border: "none",
+              borderRadius: "10px",
+              cursor: "pointer",
+              fontWeight: "bold",
+            }}
+          >
+            Profil Saya
+          </button>
+        </Link>
+      </div>
 
             <footer
         style={{
