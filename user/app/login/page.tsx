@@ -74,4 +74,22 @@ export default function LoginPage() {
           }}
         />
 
-
+        <button
+          onClick={handleLogin}
+          style={{
+            width: "100%",
+            marginTop: "20px",
+            padding: "12px",
+            background: "#2563eb",
+            color: "white",
+            border: "none",
+            borderRadius: "10px",
+            cursor: "pointer",
+          }}
+        >
+          Login
+        </button>
+      </div>
+    </div>
+  );
+}
