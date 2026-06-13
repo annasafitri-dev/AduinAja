@@ -70,6 +70,19 @@ export default function ProfilPage() {
                 marginBottom: "20px",
               }}
             />
+
+            <label>Email</label>
+              <input
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                style={{
+                  width: "100%",
+                  padding: "12px",
+                  marginTop: "10px",
+                  marginBottom: "20px",
+                }}
+              />
         </div>
       </div>
     </div>
