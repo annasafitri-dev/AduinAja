@@ -11,7 +11,7 @@ export default function LoginPage() {
 
   const handleLogin = () => {
     if (
-      email === "annasafitri@gmail.com" &&
+      email === "anna" &&
       password === "123456"
     ) {
       localStorage.setItem("isLogin", "true");
