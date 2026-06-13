@@ -113,7 +113,10 @@ export default function AdminPage() {
     worksheet,
     "Laporan"
   );
-  
+
+  XLSX.writeFile(workbook, "laporan_aduinaja.xlsx");
+};
+
   return(
     <div style={page}>
     <div style={navbar}>
