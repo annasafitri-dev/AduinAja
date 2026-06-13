@@ -96,6 +96,20 @@ export default function ProfilPage() {
                     marginBottom: "20px",
                   }}
                 />
+
+                <button
+                  onClick={handleSimpan}
+                  style={{
+                    marginTop: "20px",
+                    background: "#2563eb",
+                    color: "white",
+                    padding: "12px 25px",
+                    border: "none",
+                    borderRadius: "10px",
+                    cursor: "pointer",
+                    fontWeight: "bold",
+                  }}
+                >
         </div>
       </div>
     </div>
