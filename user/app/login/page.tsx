@@ -50,4 +50,15 @@ export default function LoginPage() {
           Login AduinAja!
         </h1>
 
-        
+        <input
+          type="email"
+          placeholder="Email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          style={{
+            width: "100%",
+            padding: "12px",
+            marginTop: "20px",
+          }}
+        />
+
