@@ -56,3 +56,23 @@ export default function ProfilPage() {
           <p>
             <b>Nomor Telepon :</b> 081234567890
           </p>
+
+            <button
+            style={{
+              marginTop: "20px",
+              background: "#2563eb",
+              color: "white",
+              padding: "12px 25px",
+              border: "none",
+              borderRadius: "10px",
+              cursor: "pointer",
+              fontWeight: "bold",
+            }}
+          >
+            Edit Profil
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
