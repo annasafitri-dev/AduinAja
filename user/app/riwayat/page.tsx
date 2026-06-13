@@ -59,5 +59,22 @@ export default function RiwayatPage() {
           <p>Status: Selesai</p>
           <p>Tanggal: 10 Juni 2026</p>
         </div>
+
+        <div
+          style={{
+            background: "#f8fafc",
+            padding: "20px",
+            borderRadius: "15px",
+          }}
+        >
+          <h2 style={{ color: "#2563eb" }}>
+            Laporan Sampah Menumpuk
+          </h2>
+
+          <p>Status: Menunggu</p>
+          <p>Tanggal: 8 Juni 2026</p>
+        </div>
+      </div>
+    </div>
   );
 }
