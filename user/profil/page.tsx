@@ -27,3 +27,20 @@ export default function ProfilPage() {
         >
           Profil Pengguna
         </h1>
+
+        <div
+          style={{
+            background: "#f8fafc",
+            padding: "25px",
+            borderRadius: "15px",
+            boxShadow: "0 2px 8px rgba(0,0,0,0.05)",
+          }}
+        >
+          <h2
+            style={{
+              color: "#2563eb",
+              marginBottom: "20px",
+            }}
+          >
+            Informasi Profil
+          </h2>
