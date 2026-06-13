@@ -45,3 +45,21 @@ export default function FAQPage() {
             mengisi data yang diperlukan dan mengunggah bukti berupa gambar.
           </p>
         </div>
+
+        <div
+          style={{
+            background: "#f8fafc",
+            padding: "20px",
+            borderRadius: "15px",
+            marginBottom: "20px",
+          }}
+        >
+          <h2 style={{ color: "#2563eb" }}>
+            Bagaimana cara melihat status laporan?
+          </h2>
+
+          <p>
+            Status laporan dapat dilihat pada halaman Riwayat Laporan yang
+            menampilkan perkembangan laporan yang telah dikirim.
+          </p>
+        </div>
