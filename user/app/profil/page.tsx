@@ -83,6 +83,19 @@ export default function ProfilPage() {
                   marginBottom: "20px",
                 }}
               />
+
+              <label>Nomor Telepon</label>
+                <input
+                  type="text"
+                  value={telepon}
+                  onChange={(e) => setTelepon(e.target.value)}
+                  style={{
+                    width: "100%",
+                    padding: "12px",
+                    marginTop: "10px",
+                    marginBottom: "20px",
+                  }}
+                />
         </div>
       </div>
     </div>
