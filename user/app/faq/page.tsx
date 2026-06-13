@@ -63,3 +63,21 @@ export default function FAQPage() {
             menampilkan perkembangan laporan yang telah dikirim.
           </p>
         </div>
+
+        <div
+          style={{
+            background: "#f8fafc",
+            padding: "20px",
+            borderRadius: "15px",
+            marginBottom: "20px",
+          }}
+        >
+          <h2 style={{ color: "#2563eb" }}>
+            Bagaimana cara mengedit profil?
+          </h2>
+
+          <p>
+            Pengguna dapat membuka halaman Profil Saya dan menggunakan tombol
+            Edit Profil untuk memperbarui informasi akun.
+          </p>
+        </div>
