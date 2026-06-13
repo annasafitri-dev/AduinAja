@@ -9,6 +9,14 @@ import {
   Legend,
 } from "chart.js";
 
+import { Pie } from "react-chartjs-2";
+
+ChartJS.register(
+  ArcElement,
+  Tooltip,
+  Legend
+);
+
 export default function AdminPage() {
   const [reports, setReports] = useState<any[]>([]);
   const [search, setSearch] = useState('');
