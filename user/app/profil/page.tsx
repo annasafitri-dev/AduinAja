@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 
+
 export default function ProfilPage() {
   const [nama, setNama] = useState("Anna Safitri");
   const [email, setEmail] = useState("annasafitri@gmail.com");
@@ -10,8 +11,7 @@ export default function ProfilPage() {
   const handleSimpan = () => {
     alert("Profil berhasil diperbarui!");
   };
-  
-export default function ProfilPage() {
+
   return (
     <div
       style={{
@@ -58,32 +58,18 @@ export default function ProfilPage() {
             Informasi Profil
           </h2>
 
-          <p>
-            <b>Nama Pengguna :</b> Anna Safitri
-          </p>
-
-          <p>
-            <b>Email :</b> annasafitri@gmail.com
-          </p>
-
-          <p>
-            <b>Nomor Telepon :</b> 081234567890
-          </p>
-
-            <button
-            style={{
-              marginTop: "20px",
-              background: "#2563eb",
-              color: "white",
-              padding: "12px 25px",
-              border: "none",
-              borderRadius: "10px",
-              cursor: "pointer",
-              fontWeight: "bold",
-            }}
-          >
-            Edit Profil
-          </button>
+          <label>Nama Pengguna</label>
+            <input
+              type="text"
+              value={nama}
+              onChange={(e) => setNama(e.target.value)}
+              style={{
+                width: "100%",
+                padding: "12px",
+                marginTop: "10px",
+                marginBottom: "20px",
+              }}
+            />
         </div>
       </div>
     </div>
